@@ -1,6 +1,5 @@
 import './NavBar.scss';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 
 
@@ -11,9 +10,9 @@ const Header = () => {
             <div className="header_container">
 {                <img className='header_logo' src= {logo} alt="logo" />
 }                <nav className='header_nav'>
-                    <Link className="header_link" to="/" >Inicio</Link>
-                    <Link className="header_link" to="/nosotros" >Nosotros</Link>
-                    <Link className="header_link" to="/contacto" >Contacto</Link>
+                    <a className="header_link" to="/" >Inicio</a>
+                    <a className="header_link" to="/nosotros" >Nosotros</a>
+                    <a className="header_link" to="/contacto" >Contacto</a>
                 </nav>
                     <CartWidget/>
             </div>
