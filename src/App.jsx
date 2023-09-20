@@ -1,17 +1,20 @@
 import React from 'react'
+import { BrowserRouter } from "react-router-dom"
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Footer from './components/Footer/Footer'
+import AppRouter from './Router/AppRouter'
 
 const App = () => {
 
-  const greetings = 'Bienvenidos al mejor sushi!'
-
   return (
-    <>
-      <NavBar/>
+      <BrowserRouter>
+        <>
 
-      <ItemListContainer greetings={greetings}/>
-    </>
+            <NavBar/>
+            <AppRouter/>  
+            <Footer/>
+        </>
+      </BrowserRouter>
   )
 }
 

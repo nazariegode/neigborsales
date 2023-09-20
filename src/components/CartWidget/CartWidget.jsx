@@ -1,15 +1,13 @@
-import { FaShoppingCart} from 'react-icons/fa'
-import './CartWidget.scss'
-
+import { FiShoppingCart } from "react-icons/fi";
+import './CartWidget.scss';
 
 const CartWidget = () => {
-
     return (
         <div>
-            <FaShoppingCart />
+            <FiShoppingCart className="custom-cart-icon" />
             <span>{4}</span>
         </div>
-    )
+    );
 }
 
-export default CartWidget 
+export default CartWidget;

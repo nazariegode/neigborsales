@@ -1,13 +1,5 @@
-
-.cart-widget {
-    color: white;
-    font-size: 30px;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s ease-in-out;
-}
-
-.cart-widget-active {
-    visibility: visible;
-    opacity: 1;
+/* CartWidget.scss */
+.custom-cart-icon {
+    color: red;     /* Cambia el color aquí */
+    font-size: 24px; /* Cambia el tamaño aquí */
 }
