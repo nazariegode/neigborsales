@@ -9,7 +9,6 @@ const Home = () => {
         <img src={fondo} alt="" style={{ width: '100%' }} />
     </div>
   )
-
 }
 
 export default Home;

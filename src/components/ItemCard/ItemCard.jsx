@@ -1,20 +1,21 @@
-import { Link } from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./ItemCard.scss"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
-const ItemCard = ({id, producto, precio, descripcion, img, stock}) => {
+const ItemCard = ({id, nombre, precio, descripcion, img}) => {
 
     return (
-        <div className='col-3 m-2'>
-                <h4>{producto}</h4>
-                <img src={img} alt={producto}/>
-                <p>{descripcion}</p>
-                {stock <= 5 && <p style={{fontWeight: 700, color: 'red'}}>Quedan sólo {stock} unidades!</p>}
-                <p>Precio: ${precio}</p>
-                <Link className="btn btn-primary" to={`/detail/${id}`}>Ver más</Link>
-        </div>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={img} alt={nombre}/>
+            <Card.Body>
+                <Card.Title>{nombre}</Card.Title>
+                <Card.Text>{descripcion}</Card.Text>
+                <Card.Text>Precio: ${precio}</Card.Text>
+                <Button variant="primary" to={`/detail/${id}`}>Ver más</Button>
+            </Card.Body>
+        </Card>
     )
 }
 
 export default ItemCard
+

@@ -11,7 +11,7 @@ const App = () => {
         <>
 
             <NavBar/>
-            <AppRouter/>  
+            <AppRouter/> 
             <Footer/>
         </>
       </BrowserRouter>

@@ -1,63 +1,40 @@
-import { useState, useMemo } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import "./ItemDetail.scss"
+import React from 'react';
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center } from '@chakra-ui/react';
+import ItemCount from '../ItemCount/ItemCount';
+import { useParams } from 'react-router-dom';
+
+const ItemDetail = ({ productos }) => {
+    const { id } = useParams()
 
 
-const ItemDetail = ({id, producto, descripcion, precio, img, category, stock}) => {
+    const filteredProducts = productos.filter((producto) => producto.id == id)
 
-    const { agregarAlCarrito, isInCart } = (CartContext)
-    const [cantidad, setCantidad] = useState(1)
-    const navigate = useNavigate()
-    
-    const handleAgregar = () => {
-        const item = {
-            id,
-            producto,
-            precio,
-            category,
-            descripcion,
-            img,
-            stock,
-            cantidad
-        }
+    return (
+        <div>
+            {filteredProducts.map((p) => {
 
-        agregarAlCarrito(item)
-        
-        }
+                return (
+                    <div key={p.id}>
+                        <Center p='1rem'>
 
-        const handleVolver = () => {
-            navigate(-1)
-        }
+                            <Card>
+                                <CardHeader>
+                                    <Heading size='md'>{p.nombre}</Heading>
+                                </CardHeader>
+                                <CardBody>
+                                    <Text>{p.description}</Text>
+                                    <Text>{p.category}</Text>
+                                </CardBody>
+                                <CardFooter>
+                                    <ItemCount />
+                                </CardFooter>
+                            </Card>
+                        </Center>
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
 
-        const fecha = useMemo(() => new Date().toLocaleString(), [cantidad])
-
-
-        return (
-            <div className="container my-5">
-                <h2>{producto}</h2>
-    
-                <img className="img" src={img} alt={producto}/>
-     
-                <h4>Precio: ${precio}</h4>
-                <br/>
-    
-                <small>Categoría: {category}</small>
-                <br/>
-            
-                {
-                    isInCart(id)
-                        ?   <Link className="btn btn-success" to="/cart">Terminar mi compra</Link>
-                        :   <ItemCount 
-                                max={stock}
-                                cantidad={cantidad}
-                                setCantidad={setCantidad}
-                                handleAgregar={handleAgregar}
-                            />
-                }
-    
-                <button onClick={handleVolver} className="btn btn-primary">Volver</button>
-            </div>
-        )
-    }
-
-export default ItemDetail
+export default React.memo(ItemDetail);

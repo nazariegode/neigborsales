@@ -1,17 +1,23 @@
-import ItemCard from "../ItemCard/ItemCard"
+import React from 'react'
+import Item from '../ItemCard/ItemCard'
 
-
-const ItemList = ({items = []}) => {
+const ItemList = ({ productos }) => {
 
     return (
-            <div className='row'>
-                {
-                    items.map((prod) => <ItemCard key={prod.id} {...prod}/>)
-                }
-            </div>
+        <div>
+            {
+                productos.map((p) => {
+                    return (
+                        <>
+                            <Item producto={p} key={p.id}
+                            />
+                        </>
+                    )
+                })
+            }
+        </div>
     )
 }
 
-export default ItemList
 
- 
+export default ItemList

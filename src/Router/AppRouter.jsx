@@ -9,10 +9,11 @@ import Home from '../Components/Home/Home'
 const AppRouter = () => {
   return (
         <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/productos/:categoryId" element={<ItemListContainer />} />
-            <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+            <Route exact path="/" element={<Home/>}/>
+            <Route exact path="/nosotros" element={<Nosotros />} />
+            <Route exact path="/productos" element={<ItemListContainer/>} />
+            <Route exact path="/categoria/:categoria" element={<ItemListContainer/>} />
+            <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
             <Route path="/cart" element={<Cart />} />
         </Routes>
   );

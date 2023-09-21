@@ -1,13 +1,13 @@
 
-export const MOCK_DATA = [
+[
     {
-        id: 1,
-        producto: "Ceviche Fusion Roll",
-        descripcion: "El favorito de la casa, nuestro roll de Ceviche con el mas fresco pescado y los mejores ingredientes, este roll viene relleno de queso crema, pollo crisoy sasonado por la casa, con cebollin, y topping de leche de tigre.",
-        precio: "10.000",
-        img: "../../assetes/card1.JPG",
-        category: "Sushi",
-        stock: "100",
+        "id": 1,
+        "producto": "Ceviche Fusion Roll",
+        "descripcion": "El favorito de la casa, nuestro roll de Ceviche con el mas fresco pescado y los mejores ingredientes, este roll viene relleno de queso crema, pollo crisoy sasonado por la casa, con cebollin, y topping de leche de tigre.",
+        "precio": "10.000",
+        "img": "../../assetes/card1.JPG",
+        "category": "Sushi",
+        "stock": "100"
     },
     {
         "id": 2,
@@ -16,8 +16,7 @@ export const MOCK_DATA = [
         "precio": "11.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 3,
@@ -26,8 +25,7 @@ export const MOCK_DATA = [
         "precio": "12.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 4,
@@ -36,8 +34,7 @@ export const MOCK_DATA = [
         "precio": "13.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 5,
@@ -46,8 +43,7 @@ export const MOCK_DATA = [
         "precio": "14.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 6,
@@ -56,8 +52,7 @@ export const MOCK_DATA = [
         "precio": "15.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 7,
@@ -66,8 +61,7 @@ export const MOCK_DATA = [
         "precio": "16.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 8,
@@ -76,8 +70,7 @@ export const MOCK_DATA = [
         "precio": "17.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "10",
-
+        "stock": "10"
     },
     {
         "id": 9,
@@ -86,8 +79,7 @@ export const MOCK_DATA = [
         "precio": "18.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Sushi",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 10,
@@ -96,8 +88,7 @@ export const MOCK_DATA = [
         "precio": "19.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Compartir",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 11,
@@ -106,8 +97,7 @@ export const MOCK_DATA = [
         "precio": "20.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Compartir",
-        "stock": "100",
-
+        "stock": "100"
     },
     {
         "id": 12,
@@ -116,7 +106,6 @@ export const MOCK_DATA = [
         "precio": "21.000",
         "img": "https://dummyimage.com/200x200/000/fff",
         "category": "Compartir",
-        "stock": "100",
-
+        "stock": "100"
     }
 ]

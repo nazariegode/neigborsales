@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.scss';
 
 
-
 const Footer = () => {
   return (
 
@@ -18,16 +17,16 @@ const Footer = () => {
         <div className="box">
             <h2>Siguenos</h2>
             <div className="red-social">
-                <a href="https://www.instagram.com/nazarisushi/?hl=es" target="_blank" className="fa-brands fa-instagram"></a>
-                <a href="https://ms-my.facebook.com/dnazariego/ " target="_blank" className="fa fa-facebook"></a>
-                <a href="https://wa.me/56964040431" target="_blank" className="fa fa-whatsapp"></a>
+                <a href="https://www.instagram.com/nazarisushi/?hl=es" target="_blank" className="fa-instagram"></a>
+                <a href="https://ms-my.facebook.com/dnazariego/ " target="_blank" className="fa-facebook"></a>
+                <a href="https://wa.me/56964040431" target="_blank" className="fa-whatsapp"></a>
             </div>
         </div>
 
         <div className="box">
             <h2>Únete a nuestro newsletter</h2>
         <form action="">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email </label>
             <input type="email" name="email" placeholder="Ingresa tu Email"/>
             <button type="submit" className="btn">Unirme</button>
         </form>
