@@ -11,7 +11,7 @@ const ItemCount = () => {
                 <Box w='40px' h='40px'>
 
                     <Button size='xs' onClick={() => setContador(contador + 1)}>
-                        +
+                        Sumar
                     </Button>
                 </Box>
                 <Box w='40px' h='40px' >
@@ -20,7 +20,7 @@ const ItemCount = () => {
                 </Box>
                 <Box w='40px' h='40px' >
                     <Button size='xs' onClick={() => setContador(contador - 1)}>
-                        -
+                        Restar
                     </Button>
 
                 </Box>

@@ -1,16 +1,16 @@
 import React from 'react'
-import Item from '../ItemCard/ItemCard'
+import ItemCard from '../ItemCard/ItemCard'
 
 const ItemList = ({ productos }) => {
 
     return (
         <div>
             {
-                productos.map((p) => {
+                productos.map((producto) => {
                     return (
                         <>
-                            <Item producto={p} key={p.id}
-                            />
+                            <ItemCard producto={producto} 
+                                key={producto.id}/>
                         </>
                     )
                 })

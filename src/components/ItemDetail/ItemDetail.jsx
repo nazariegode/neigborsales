@@ -11,19 +11,19 @@ const ItemDetail = ({ productos }) => {
 
     return (
         <div>
-            {filteredProducts.map((p) => {
+            {filteredProducts.map((producto) => {
 
                 return (
-                    <div key={p.id}>
+                    <div key={producto.id}>
                         <Center p='1rem'>
 
                             <Card>
                                 <CardHeader>
-                                    <Heading size='md'>{p.nombre}</Heading>
+                                    <Heading size='md'>{producto.producto}</Heading>
                                 </CardHeader>
                                 <CardBody>
-                                    <Text>{p.description}</Text>
-                                    <Text>{p.category}</Text>
+                                    <Text>{producto.description}</Text>
+                                    <Text>{producto.category}</Text>
                                 </CardBody>
                                 <CardFooter>
                                     <ItemCount />

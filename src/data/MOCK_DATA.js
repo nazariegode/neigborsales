@@ -1,11 +1,10 @@
-
-[
+const productos = [
     {
         "id": 1,
         "producto": "Ceviche Fusion Roll",
         "descripcion": "El favorito de la casa, nuestro roll de Ceviche con el mas fresco pescado y los mejores ingredientes, este roll viene relleno de queso crema, pollo crisoy sasonado por la casa, con cebollin, y topping de leche de tigre.",
         "precio": "10.000",
-        "img": "../../assetes/card1.JPG",
+        "img": "https://www.gourmet.cl/wp-content/uploads/2016/09/Crispy-Rolls-iStock-817071822-Nuevo-570x458.jpg",
         "category": "Sushi",
         "stock": "100"
     },
@@ -14,7 +13,7 @@
         "producto": "Avocado Roll",
         "descripcion": "Nuestro Avocado Roll, esta relleno de palta, queso crema, y kanikama, envuelto en ciboulette, topping de palta de la casa y salsa de anguila.",
         "precio": "11.000",
-        "img": "https://dummyimage.com/200x200/000/fff",
+        "img": "https://www.gourmet.cl/wp-content/uploads/2016/09/Crispy-Rolls-iStock-817071822-Nuevo-570x458.jpg",
         "category": "Sushi",
         "stock": "100"
     },
@@ -23,7 +22,7 @@
         "producto": "Chesse Roll",
         "descripcion": "Nuestro Roll de queso flameado, esta relleno con queso crema, platano maduro, pollo crispy sasonado por la casa, envuelto en un queso flameado y topping de anguila con toques de ciboulette.",
         "precio": "12.000",
-        "img": "https://dummyimage.com/200x200/000/fff",
+        "img": "https://www.gourmet.cl/wp-content/uploads/2016/09/Crispy-Rolls-iStock-817071822-Nuevo-570x458.jpg",
         "category": "Sushi",
         "stock": "100"
     },
@@ -109,3 +108,4 @@
         "stock": "100"
     }
 ]
+export default productos
