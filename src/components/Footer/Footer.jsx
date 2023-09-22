@@ -37,9 +37,6 @@ const Footer = () => {
         <div className="grupo-2">
             <small className="fa-solid fa-copyright"> 2023 <b>Nazarisushi</b> -  Todos los Derechos Reservados.</small>
         </div>
-        <div className="grupo-2">
-            <small className="elaborado">Elaborado por David Nazariego</small>
-        </div>
     </footer>
   )
 }

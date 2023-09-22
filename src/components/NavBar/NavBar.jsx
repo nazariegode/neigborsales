@@ -14,8 +14,8 @@ const NavBar = () => {
 {                <img className='header_logo' src= {logo} alt="logo" />
 }                <nav className='header_nav'>
                     <Link className="header_link" to="/" >Inicio</Link>
-                    <Link className="header_link" to="/nosotros" >Nosotros</Link>
                     <Link className="header_link" to="/productos" >Productos</Link>
+                    <Link className="header_link" to="/nosotros" >Nosotros</Link>
                 </nav>
                     <CartWidget/>
             </div>

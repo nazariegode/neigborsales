@@ -1,17 +1,16 @@
 import React from 'react'
 import ItemCard from '../ItemCard/ItemCard'
-
+import './ItemList.scss'
 const ItemList = ({ productos }) => {
 
     return (
-        <div>
+        <div className='Flex'> 
             {
                 productos.map((producto) => {
                     return (
-                        <>
-                            <ItemCard producto={producto} 
-                                key={producto.id}/>
-                        </>
+                    
+                            <ItemCard key={producto.id} producto={producto}/>
+                        
                     )
                 })
             }

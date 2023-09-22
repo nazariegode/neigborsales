@@ -2,7 +2,21 @@
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 20px 10px;
+    margin-top: 0px;
     font-family:'Trebuchet MS';
     }
+.ItemContent {
+    display: gap;
+}
+
+.Card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Button {
+    bottom: 0%;
+}
