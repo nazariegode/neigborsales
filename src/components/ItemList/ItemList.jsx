@@ -5,6 +5,7 @@ const ItemList = ({ productos }) => {
 
     return (
         <div className='Flex'> 
+            <div className="container">
             {
                 productos.map((producto) => {
                     return (
@@ -14,6 +15,7 @@ const ItemList = ({ productos }) => {
                     )
                 })
             }
+            </div>
         </div>
     )
 }

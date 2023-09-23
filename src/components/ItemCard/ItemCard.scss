@@ -2,12 +2,14 @@
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    padding: 20px 10px;
+    padding: 20px 1px;
     margin-top: 0px;
     font-family:'Trebuchet MS';
     }
+
 .ItemContent {
     display: gap;
+    font-size: 12px;
 }
 
 .Card-body {
@@ -19,4 +21,5 @@
 
 .Button {
     bottom: 0%;
+    font-size: 12px;
 }

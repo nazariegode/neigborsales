@@ -4,7 +4,8 @@ import '../Nosotros/Nosotros.scss'
 const Nosotros = () => {
     
     return (
-            <div className='backg'>
+        <div className='backg'>
+                <div className='p'>
                 <p>Acerca de Nosotros</p>
                 <p>
                 En NAZARISUSHI, creemos en la magia de la comida japonesa auténtica. Con pasión y dedicación, hemos traído los sabores tradicionales del Japón a tu mesa, permitiéndote disfrutar de una experiencia culinaria única.
@@ -16,7 +17,11 @@ const Nosotros = () => {
                 Nos enorgullece ser tu destino preferido para el sushi en Santiago de Chile. Esperamos verte pronto y compartir contigo la pasión por la comida japonesa que nos impulsa todos los días.
                 ¡Bienvenido a NAZARISUSHI!
                 </p>
+                </div>
+                <div className='img'>
                 <img src={chef} alt="chef" width={500}/>
+                </div>
+                    
             </div>
     )
 }
