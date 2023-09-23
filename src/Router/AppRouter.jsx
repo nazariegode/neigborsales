@@ -14,7 +14,7 @@ const AppRouter = () => {
             <Route exact path="/productos" element={<ItemListContainer/>} />
             <Route exact path="/categoria/:categoria" element={<ItemListContainer/>} />
             <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
-            <Route path="/cart" element={<Cart />} />
+            <Route exact path="/cart" element={<Cart />} />
         </Routes>
   );
 };
