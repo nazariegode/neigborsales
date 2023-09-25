@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center } from '@chakra-ui/react';
 import ItemCount from '../ItemCount/ItemCount';
 import { useParams } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+
 
 const ItemDetail = ({ productos }) => {
     const { id } = useParams()
@@ -15,21 +17,15 @@ const ItemDetail = ({ productos }) => {
 
                 return (
                     <div key={producto.id}>
-                        <Center p='1rem'>
-
-                            <Card>
-                                <CardHeader>
-                                    <Heading size='md'>{producto.producto}</Heading>
-                                </CardHeader>
-                                <CardBody>
-                                    <Text>{producto.description}</Text>
-                                    <Text>{producto.category}</Text>
-                                </CardBody>
-                                <CardFooter>
-                                    <ItemCount />
-                                </CardFooter>
-                            </Card>
-                        </Center>
+                        <Card style={{ width: '20rem' }}>
+                            <Card.Img className="Card-img" variant="top" src={producto.img} />
+                            <Card.Body className='Card-body'>
+                                <Card.Title>{producto.producto}</Card.Title>
+                                <Card.Text>{producto.descripcion}</Card.Text>
+                                <Card.Text>Precio: ${producto.precio}</Card.Text>
+                            </Card.Body>
+                            <ItemCount />
+                        </Card>
                     </div>
                 )
             })}

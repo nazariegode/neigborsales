@@ -19,7 +19,20 @@
     position: relative;
 }
 
-.Button {
-    bottom: 0%;
+.btn {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #000000;
+    color: #fff; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+    font-family:'Trebuchet MS';
     font-size: 12px;
 }
+
+.btn:hover {
+    color: #fff;
+    background-color: #c81c1c; 
+  }

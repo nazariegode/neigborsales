@@ -1,38 +1,39 @@
-import ItemList from '../ItemList/ItemList'
-import { useParams } from 'react-router-dom'
-import productos from '../../data/MOCK_DATA'
+import React, { useState, useEffect } from 'react';
+import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import productos from '../../data/MOCK_DATA';
 
 const ItemListContainer = () => {
-    const { categoria } = useParams()
+    const { category } = useParams();
 
+    const [productosFiltrados, setProductosFiltrados] = useState([]);
 
-    const getProductos = new Promise((resolve, reject) => {
-        if (productos.length > 0) {
+    useEffect(() => {
+        const getProductos = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(productos)
-            }, 2000)
-        } else {
-            reject(new Error("No hay datos para mostrar"))
-        }
-    })
+                resolve(productos);
+            }, 1000);
+        });
 
-    getProductos
-        .then((res) => {
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+        getProductos
+            .then((res) => {
+                if (category) {
+                    const filtered = res.filter((producto) => producto.category === category);
+                    setProductosFiltrados(filtered);
+                } else {
+                    setProductosFiltrados(res);
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, [category]);
 
-
-    const filteredProducts = productos.filter((producto) => producto.categoria === categoria)
     return (
-        <>
-            {
-                categoria ? <ItemList productos={filteredProducts} /> : <ItemList productos={productos} />
-            }
+        <div>
+            <ItemList productos={productosFiltrados} category={category} />
+        </div>
+    );
+};
 
-        </>
-    )
-}
-
-export default ItemListContainer
+export default ItemListContainer;

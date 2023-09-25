@@ -35,11 +35,39 @@
 
 .header_link {
     color: #c81c1c;
+    background-color: #000000;
     font-size: 18px;
     text-decoration: none;
     text-transform: uppercase;
     font-family:'Trebuchet MS';
+    color: none;
     justify-content: right;
 }
 
+.custom-dropdown{
+    font-size: 18px;
+        font-family:'Trebuchet MS';
 
+      color: #c81c1c; 
+
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: #000000; 
+    font-family:'Trebuchet MS';
+    font-size: 16px;
+
+}
+
+.custom-dropdown .dropdown-item {
+  color: #c81c1c; 
+    font-family:'Trebuchet MS';
+    font-size: 16px;
+}
+
+.custom-dropdown .dropdown-item.active,
+.custom-dropdown .dropdown-item:hover {
+  background-color: #555; 
+  color: #fff; 
+    font-family:'Trebuchet MS';
+}
