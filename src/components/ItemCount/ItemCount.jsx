@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Close from '../Close/Close';
 
 const ItemCount = () => {
     const [contador, setContador] = useState(0)

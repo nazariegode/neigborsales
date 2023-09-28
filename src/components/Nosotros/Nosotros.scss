@@ -5,7 +5,7 @@
 }
 
 .backg {
-    background-image: url('../../assets/fondo.png');
+    background-image: url('../src/assets/fondo.png');
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -16,7 +16,7 @@
     margin: 0 15rem;
     padding: 30px 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .backg p {
@@ -24,6 +24,6 @@
     font-size: 18px;
     max-width: 1100px;
     margin: 0px 15rem;
-    padding: 15px 0;
+    padding: 25px 0;
     color: white;
 }

@@ -6,7 +6,7 @@ const Nosotros = () => {
     return (
         <div className='backg'>
                 <div className='p'>
-                <p>Acerca de Nosotros</p>
+                <p>ACERCA DE NOSOTROS</p>
                 <p>
                 En NAZARISUSHI, creemos en la magia de la comida japonesa auténtica. Con pasión y dedicación, hemos traído los sabores tradicionales del Japón a tu mesa, permitiéndote disfrutar de una experiencia culinaria única.
                 Nuestra historia comenzó con un amor profundo por el sushi, sashimi y otras delicias japonesas. Desde entonces, nos hemos comprometido a servir platos excepcionales elaborados con los ingredientes más frescos y la técnica más precisa. Cada bocado es una obra maestra cuidadosamente preparada que refleja la tradición y el arte culinario de Japón.
