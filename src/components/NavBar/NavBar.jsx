@@ -13,8 +13,9 @@ const NavBar = () => {
         <header className="header">
             
             <div className="header_container">
-{                <img className='header_logo' src= {logo} alt="logo" />
-}                
+                    <Link to="/">
+                        <img className='header_logo' src={logo} alt="logo" />
+                    </Link>             
                     <nav className='header_nav'>
                         <Link className="header_link" to="/">Inicio</Link>
                         <NavDropdown title="PRODUCTOS" className="custom-dropdown">
