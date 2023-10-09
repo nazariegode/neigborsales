@@ -12,7 +12,7 @@ const CartWidget = () => {
       {cart.length > 0 && (
         <Link to="/cart" className="cart-widget cart-widget-active">
           <FaShoppingCart className="cart-icon" />
-          <span style={{ color: 'red' }}>{totalCantidad()}</span> {/* Establece el color a rojo */}
+          <span style={{ color: 'red' }}>{totalCantidad()}</span>
         </Link>
       )}
     </>

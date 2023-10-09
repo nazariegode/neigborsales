@@ -1,57 +1,64 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import productos from '../../data/MOCK_DATA';
-import Spinner from 'react-bootstrap/Spinner'; // Importa el Spinner
+import Spinner from 'react-bootstrap/Spinner';
+import { collection, query, where, getDocs } from 'firebase/firestore'; 
+import { db } from "../../firebase/config";
 
 const ItemListContainer = () => {
     const { category } = useParams();
 
     const [productosFiltrados, setProductosFiltrados] = useState([]);
-    const [loading, setLoading] = useState(true); // Estado para controlar si se está cargando
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        const getProductos = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(productos);
-            }, 1000);
-        });
+        const fetchData = async () => {
+            try {
+                const productosCollection = collection(db, 'productos'); 
+                let querySnapshot;
 
-        getProductos
-            .then((res) => {
                 if (category) {
-                    const filtered = res.filter((producto) => producto.category === category);
-                    setProductosFiltrados(filtered);
+                    const q = query(productosCollection, where('category', '==', category));
+                    querySnapshot = await getDocs(q);
                 } else {
-                    setProductosFiltrados(res);
+                    querySnapshot = await getDocs(productosCollection);
                 }
-                setLoading(false); // Indicar que la carga ha finalizado
-            })
-            .catch((error) => {
+
+                const productos = querySnapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+
+                setProductosFiltrados(productos);
+                setLoading(false);
+            } catch (error) {
                 console.error(error);
-            });
+            }
+        };
+
+        fetchData();
     }, [category]);
 
     return (
         <div>
-            {loading ? ( // Mostrar el Spinner si se está cargando
+            {loading ? (
                 <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          backgroundColor: "#c81c1c"
-        }}
-      >
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-        </div>  
-                ) : (
-                    <ItemList productos={productosFiltrados} category={category} />
-                )}
-            </div>
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100vh",
+                        backgroundColor: "#c81c1c"
+                    }}
+                >
+                    <Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                </div>
+            ) : (
+                <ItemList productos={productosFiltrados} category={category} />
+            )}
+        </div>
     );
 };
 

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import productos from "../../data/MOCK_DATA";
 import Spinner from 'react-bootstrap/Spinner';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from "../../firebase/config";
 
 const ItemDetailContainer = () => {
   const [loadingProductos, setLoadingProductos] = useState(true);
@@ -11,7 +12,18 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        const productosCollection = collection(db, 'productos'); // Reemplaza 'productos' con el nombre de tu colección en Firestore
+
+        const querySnapshot = await getDocs(productosCollection);
+        const productos = [];
+
+        querySnapshot.forEach((doc) => {
+          productos.push({
+            id: doc.id,
+            ...doc.data()
+          });
+        });
+
         setProductosData(productos);
         setLoadingProductos(false);
       } catch (error) {
