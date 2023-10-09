@@ -13,23 +13,21 @@ const ItemDetail = ({ productos }) => {
     return (
         <div className='bkg'>
             {filteredProducts.map((producto) => (
-                <>
                 <div className='card-detail' key={producto.id}>
-                    <Card className="d-flex flex-row"> 
+                    <Card style={{ width: '20rem' }}>
                         <Card.Img className="Card-img" variant="top" src={producto.img} />
                         <Card.Body className='Card-body'>
                             <Card.Title>{producto.producto}</Card.Title>
                             <Card.Text>{producto.descripcion}</Card.Text>
                             <Card.Text>Precio: ${producto.precio}</Card.Text>
-                            <ItemCount />
+                        <ItemCount producto={producto}/>
                         </Card.Body>
                     </Card>
                 </div>
-                <div>
-                    <Link to={`/productos/`} className="btn btn-primary">Volver a la categoría</Link>
-                </div>
-                </>
             ))}
+            <div>
+                <Link to={`/productos/`} className="btn btn-primary">Volver a la categoría</Link>
+            </div>
         </div>
     );
 }

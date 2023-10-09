@@ -3,7 +3,7 @@ import { CartContext } from '../Context/CartContext';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-const ItemCount = () => {
+const ItemCount = ({producto}) => {
     const { agregarAlCarrito } = useContext(CartContext);
     const [contador, setContador] = useState(0);
 
@@ -15,10 +15,11 @@ const ItemCount = () => {
 
     const agregarAlCarritoClick = () => {
         if (contador > 0) {
-            const producto = {
-                // Define tu objeto de producto aquí
+            const prod = {
+                ...producto,
+                cantidad:contador
             };
-            agregarAlCarrito(producto);
+            agregarAlCarrito(prod);
         }
     }
 

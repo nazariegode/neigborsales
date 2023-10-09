@@ -18,10 +18,39 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const agregarAlCarrito = (item) => {
-    setCart([...cart, item]);
+    const existingItem = cart.find((prod) => prod.id === item.id);
+
+    if (existingItem) {
+      // Si el producto ya existe en el carrito, actualiza la cantidad
+      setCart((prevCart) =>
+        prevCart.map((prod) =>
+          prod.id === item.id ? { ...prod, cantidad: prod.cantidad + 1 } : prod
+        )
+      );
+    } else {
+      // Si el producto no existe en el carrito, agrégalo
+      setCart([...cart, { ...item, cantidad: 1 }]);
+    }
   };
 
-  const eliminarDelCarrito = (id) => {
+  const eliminarDelCarrito = (id, eliminarCompleto) => {
+    const itemIndex = cart.findIndex((prod) => prod.id === id);
+    if (itemIndex !== -1) {
+      const updatedCart = [...cart];
+      if (eliminarCompleto) {
+        updatedCart.splice(itemIndex, 1); // Eliminar el producto completamente
+      } else {
+        updatedCart[itemIndex].cantidad -= 1;
+        if (updatedCart[itemIndex].cantidad === 0) {
+          updatedCart.splice(itemIndex, 1); // Eliminar el producto si la cantidad es 0
+        }
+      }
+      setCart(updatedCart);
+    }
+  };
+  
+
+  const eliminarTodosDelCarrito = (id) => {
     setCart(cart.filter((prod) => prod.id !== id));
   };
 
@@ -45,6 +74,7 @@ export const CartProvider = ({ children }) => {
     cart,
     agregarAlCarrito,
     eliminarDelCarrito,
+    eliminarTodosDelCarrito, // Agregar la nueva función
     isInCart,
     totalCompra,
     totalCantidad,

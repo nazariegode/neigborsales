@@ -7,6 +7,18 @@
 .cart-icon {
     color: #c81c1c; // Cambia 'blue' al color que desees
     font-size: 24px; // Cambia el tamaño si es necesario
+    text-decoration: none;
+  }
+  
+  .cart-number {
+    color: #fff; // Cambia 'blue' al color que desees
+    font-size: 15px; // Cambia el tamaño si es necesario
+    text-decoration: none; 
+    font-family:'Trebuchet MS';
+
   }
 
-  
+.cart-widget{
+    text-decoration: none;
+
+}
