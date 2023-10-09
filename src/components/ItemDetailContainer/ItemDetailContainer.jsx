@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import productos from "../../data/MOCK_DATA";
+import Spinner from 'react-bootstrap/Spinner';
 
 const ItemDetailContainer = () => {
   const [loadingProductos, setLoadingProductos] = useState(true);
@@ -26,7 +27,21 @@ const ItemDetailContainer = () => {
   }
 
   if (loadingProductos) {
-    return <div>Cargando productos...</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          backgroundColor: "#c81c1c"
+        }}
+      >
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
   }
 
   return <ItemDetail productos={productosData} />;

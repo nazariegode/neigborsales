@@ -17,22 +17,31 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    width: 318px;
+    height: auto;
 }
 
+.Card-img{
+    width: 100%;
+    height: auto;
+    
+}
 .btn {
     display: inline-block;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: #000000;
-    color: #fff; 
-    text-decoration: none; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer;
-    font-family:'Trebuchet MS';
-    font-size: 12px;
-}
-
-.btn:hover {
     color: #fff;
-    background-color: #c81c1c; 
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+    margin-bottom: 10px; /* Agregar margen inferior */
   }
+  
+  .btn:hover {
+    color: #fff;
+    background-color: #c81c1c;
+  }
+  

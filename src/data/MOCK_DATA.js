@@ -59,7 +59,7 @@ const productos = [
         "descripcion": "No son las tradicionales Gyosas, ya que estas con crujientes, y las puedes encontrar en varias presentaciones, de vegetales, pollo, cerdo o carne. Vienen 5 unidades.",
         "precio": "16.000",
         "img": "../src/assets/card7.JPG",
-        "category": "bebidas",
+        "category": "compartir",
         "stock": "100"
     },
     {
@@ -68,17 +68,8 @@ const productos = [
         "descripcion": "En este barco encontrarás diferentes tipos de rolls, para que compartas con tus seres queridos, y ademas vienen incluidas unas gyosas. Puedes elegir las dos elecciones, de 40 piezas y 60 piezas.",
         "precio": "17.000",
         "img": "../src/assets/card8.JPG",
-        "category": "sushi",
+        "category": "compartir",
         "stock": "10"
-    },
-    {
-        "id": 9,
-        "producto": "Ceviche Explotion Roll",
-        "descripcion": "El favorito de la casa, nuestro roll de Ceviche con el mas fresco pescado y los mejores ingredientes, este roll viene relleno de queso crema, pollo crisoy sasonado por la casa, con cebollin, y topping de leche de tigre",
-        "precio": "18.000",
-        "img": "../src/assets/card9.JPG",
-        "category": "sushi",
-        "stock": "100"
     },
     {
         "id": 10,
@@ -90,22 +81,31 @@ const productos = [
         "stock": "100"
     },
     {
+        "id": 9,
+        "producto": "Coca-Cola 350ML",
+        "descripcion": "Bebida resfrescante, para acompañar tus rolls de sushi.",
+        "precio": "3.000",
+        "img": "../src/assets/cocacola.png",
+        "category": "bebidas",
+        "stock": "50"
+    },
+    {
         "id": 11,
-        "producto": "Caribbean Roll",
-        "descripcion": "El preferido de los caribeños, este roll esta relleno con pollo crispy sasonado por la casa, queso crema y palta, envuelto en platano maduro, y con un topping de trozos de pollo crispy, salsa de anguila y ciboulette.",
-        "precio": "20.000",
-        "img": "../src/assets/card11.JPG",
-        "category": "compartir",
-        "stock": "100"
+        "producto": "Fanta 350ML",
+        "descripcion": "Bebida resfrescante, para acompañar tus rolls de sushi.",
+        "precio": "3.000",
+        "img": "../src/assets/fanta.png",
+        "category": "bebidas",
+        "stock": "50"
     },
     {
         "id": 12,
-        "producto": "Fuji Tiger Roll",
-        "descripcion": "Este roll, esta relleno de salmon, palta y queso crema, en tempura, bañado con una salsa fuji, trozos de camarones apanados, salsa de anguila y toque de ciboulette.",
-        "precio": "21.000",
-        "img": "../src/assets/card12.JPG",
-        "category": "compartir",
-        "stock": "100"
+        "producto": "Sprite 350ML",
+        "descripcion": "Bebida resfrescante, para acompañar tus rolls de sushi.",
+        "precio": "3.000",
+        "img": "../src/assets/sprite.png",
+        "category": "bebidas",
+        "stock": "50"
     }
 ]
 
