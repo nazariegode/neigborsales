@@ -5,6 +5,7 @@ import ItemDetailContainer from "../Components/ItemDetailContainer/ItemDetailCon
 import Cart from "../Components/Cart/Cart";
 import Nosotros from "../Components/Nosotros/Nosotros";
 import Home from '../Components/Home/Home'
+import Checkout from '../Components/Checkout/Checkout'; 
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Route exact path="/productos/:category" element={<ItemListContainer />} />
       <Route exact path="/item/:id" element={<ItemDetailContainer />} />
       <Route exact path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
   );
 };

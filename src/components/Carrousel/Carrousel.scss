@@ -1,20 +1,20 @@
 .carousel-item {
-    text-align: center; /* Centra el contenido dentro de cada diapositiva */
+    text-align: center; 
     background-color: #c81c1c;
     font-family:'Trebuchet MS';
   }
 
 
 .carousel-item img {
-  max-width: 600px; /* Ajusta el tamaño máximo de las imágenes */
-  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-  margin: 20px auto; /* Centra las imágenes horizontalmente */
+  max-width: 600px; 
+  height: auto; 
+  margin: 20px auto; 
   border-radius: 30px;
 }
 
 .carousel-item h5 {
-  max-width: 600px; /* Ajusta el tamaño máximo de las imágenes */
-  margin: 20px auto; /* Centra las imágenes horizontalmente */
+  max-width: 600px; 
+  margin: 20px auto; 
   background-color: #c81c1c;
   color: #000000;
 }

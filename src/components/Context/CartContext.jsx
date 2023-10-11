@@ -7,13 +7,11 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    // Al cargar el componente, intenta obtener el carrito almacenado en localStorage
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(storedCart);
   }, []);
 
   useEffect(() => {
-    // Cada vez que el carrito cambie, actualiza el localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
@@ -21,14 +19,12 @@ export const CartProvider = ({ children }) => {
     const existingItem = cart.find((prod) => prod.id === item.id);
 
     if (existingItem) {
-      // Si el producto ya existe en el carrito, actualiza la cantidad
       setCart((prevCart) =>
         prevCart.map((prod) =>
           prod.id === item.id ? { ...prod, cantidad: prod.cantidad + 1 } : prod
         )
       );
     } else {
-      // Si el producto no existe en el carrito, agrégalo
       setCart([...cart, { ...item, cantidad: 1 }]);
     }
   };
@@ -38,11 +34,11 @@ export const CartProvider = ({ children }) => {
     if (itemIndex !== -1) {
       const updatedCart = [...cart];
       if (eliminarCompleto) {
-        updatedCart.splice(itemIndex, 1); // Eliminar el producto completamente
+        updatedCart.splice(itemIndex, 1);
       } else {
         updatedCart[itemIndex].cantidad -= 1;
         if (updatedCart[itemIndex].cantidad === 0) {
-          updatedCart.splice(itemIndex, 1); // Eliminar el producto si la cantidad es 0
+          updatedCart.splice(itemIndex, 1); 
         }
       }
       setCart(updatedCart);
@@ -74,7 +70,7 @@ export const CartProvider = ({ children }) => {
     cart,
     agregarAlCarrito,
     eliminarDelCarrito,
-    eliminarTodosDelCarrito, // Agregar la nueva función
+    eliminarTodosDelCarrito,
     isInCart,
     totalCompra,
     totalCantidad,

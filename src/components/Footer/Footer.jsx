@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import 'font-awesome/css/font-awesome.min.css'; // Importa la hoja de estilos de Font Awesome
+import 'font-awesome/css/font-awesome.min.css'; 
 
 
 
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grupo-1">
           <div className="box">
             <h2>Sobre Nosotros</h2>
-            <p>Somos especialistas en generar una fusión de sabores. Estamos completamente identificados con comer = felicidad</p>
+            <p>Somos especialistas en generar una fusión de sabores. Estamos completamente identificados con comer es igual a felicidad</p>
           </div>
   
           <div className="box">
@@ -24,12 +24,22 @@ const Footer = () => {
   
           <div className="box">
             <h2>Únete a nuestro newsletter</h2>
-            <form action="">
-              <label htmlFor="email"> Ingresa tu email </label>
-              <br />
-              <input type="email" name="email" placeholder="Ingresa tu email aquí" />
-              <button type="submit" className="btn"> Unirme</button>
-            </form>
+            <form className="newsletter" action="">
+  <label htmlFor="email" className="form-label">
+    Ingresa tu email
+  </label>
+  <br />
+  <input
+    type="email"
+    name="email"
+    placeholder="Ingresa tu email aquí"
+    className="form-input" // Agregar una clase CSS al input
+  />
+  <button type="submit" className="btn btn-primary">
+    Unirme
+  </button>
+</form>
+
           </div>
         </div>
   

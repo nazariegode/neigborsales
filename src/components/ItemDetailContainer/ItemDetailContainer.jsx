@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productosCollection = collection(db, 'productos'); // Reemplaza 'productos' con el nombre de tu colección en Firestore
+        const productosCollection = collection(db, 'productos');
 
         const querySnapshot = await getDocs(productosCollection);
         const productos = [];
