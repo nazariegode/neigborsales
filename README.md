@@ -38,12 +38,13 @@ Si deseas contribuir a este proyecto, puedes hacerlo de la siguiente manera:
 
 ## Sigueme en: 
 
-[Instagram
+- [Instagram
 ](https://www.instagram.com/nazariegode/)
-[LinkedIn](https://www.linkedin.com/in/nazariego/)
+
+- [LinkedIn](https://www.linkedin.com/in/nazariego/)
 
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en ponerte en contacto conmigo a través de mi correo electrónico: [tucorreo@example.com](mailto:dnazariego@gmail.com). 
+Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en ponerte en contacto conmigo a través de mi correo electrónico: [dnazariego@gmail.com](mailto:dnazariego@gmail.com). 
 ¡Gracias por tu interés!
