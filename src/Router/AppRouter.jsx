@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ItemListContainer from "../Components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "../Components/ItemDetailContainer/ItemDetailContainer";
-import Cart from "../Components/Cart/Cart";
-import Nosotros from "../Components/Nosotros/Nosotros";
-import Home from '../Components/Home/Home'
-import Checkout from '../Components/Checkout/Checkout'; 
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
+import Cart from "../components/Cart/Cart";
+import Nosotros from "../components/Nosotros/Nosotros";
+import Home from '../components/Home/Home'
+import Checkout from '../components/Checkout/Checkout'; 
 
 const AppRouter = () => {
   return (
