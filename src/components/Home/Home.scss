@@ -2,29 +2,117 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  
+  .home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    align-items: center;
 }
-
-.bienvenida{
-    position: absolute;
-    top: 55%;
-    left: 7%;
-    color: #fff;
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin: auto;
-    justify-content: center;
-    font-family:'Trebuchet MS';
-
-}
-.bienvenida2{
-    position: absolute;
-    top: 63%;
-    left: 7%;
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra completamente el contenedor */
+    position: absolute; /* La imagen queda detrás del texto */
+    top: 0;
+    left: 0;
+    z-index: -1; /* La imagen estará detrás del texto */
+  }
+  
+  .text-container {
     color: white;
+    justify-content: start;
+    align-items: start;
+    margin-left: 50px;
+    margin-top: 350px;
+  }
+  
+  .bienvenida {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS';
+    margin: 0px;
+  }
+  
+  .bienvenida2 {
     font-size: 5rem;
     text-transform: uppercase;
-    margin: auto;
-    justify-content: center;
-    font-family:'Trebuchet MS';
-
-}
+    font-family: 'Trebuchet MS';
+  }
+  
+  /* Media Queries para hacer el texto responsivo */
+  @media (max-width: 1024px) {
+    .bienvenida {
+      font-size: 2.5rem;
+      margin-bottom: 0px;
+    }
+  
+    .bienvenida2 {
+      font-size: 4rem;
+    }
+    .home-container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+        display: flex;
+    }
+    .text-container {
+        color: white;
+        justify-content: start;
+        align-items: start;
+        margin-left: 40px;
+        margin-top: 150px;
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .bienvenida {
+      font-size: 2rem;
+      margin-bottom: 0px;
+    }
+  
+    .bienvenida2 {
+      font-size: 3.5rem;
+    }
+    .home-container {
+        position: relative;
+        width: 100%;
+        height: 60vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+        display: flex;
+    }
+    .text-container {
+        color: white;
+        justify-content: start;
+        align-items: start;
+        margin-left: 40px;
+        margin-top: 150px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .bienvenida 
+    {
+      font-size: 1.2rem;
+      margin-bottom: 0px;
+    }
+  
+    .bienvenida2 {
+      font-size: 2.5rem;
+    }
+    .home-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+    }
+    .text-container {
+        color: white;
+        justify-content: start;
+        align-items: start;
+        margin-left: 20px;
+        margin-top: 200px;
+      }
+  }
+  

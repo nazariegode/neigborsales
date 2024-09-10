@@ -1,23 +1,24 @@
 .custom-cart-icon {
     color: #c81c1c;  
-    font-size: 24px; 
 }
 
 .cart-icon {
-    color: #c81c1c; 
-    font-size: 24px; 
+    color: #ff0000; 
+    font-size: 25px; 
     text-decoration: none;
   }
   
   .cart-number {
-    color: #fff; 
-    font-size: 15px; 
+    color: #ff0000; 
+    font-size: 12px; 
+    border-radius:4px;
+    background-color: #ffffff;
+    padding: 2px;
+    margin-left: 5px;
     text-decoration: none; 
     font-family:'Trebuchet MS';
-
   }
 
 .cart-widget{
     text-decoration: none;
-
 }

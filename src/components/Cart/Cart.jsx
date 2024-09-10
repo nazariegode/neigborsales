@@ -68,7 +68,7 @@ const Cart = () => {
         ))}
       </div>
       <div className="cart-summary">
-        <h2>Tu compra</h2>
+        <h2>Resumen de tu compra</h2>
         <div className="cart-total">
           <h5>Total compra: $ {totalCompra()}</h5>
           <hr />

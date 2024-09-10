@@ -1,24 +1,24 @@
 import React from 'react';
 import fondo from '../../assets/fondo.png';
-import './Home.scss'
-import Carrousel from '../Carrousel/Carrousel'
+import './Home.scss';
+import Carrousel from '../Carrousel/Carrousel';
 
 const Home = () => {
-  
-    return (
+  return (
     <>
-      <div>
+      <div className="home-container">
+        <img src={fondo} alt="Fondo" className="background-image" />
+        <div className="text-container">
           <h1 className='bienvenida'>Bienvenidos a</h1>
-          <h1 className='bienvenida2'>Nazari SUSHI</h1>
-          <img src={fondo} alt="" style={{ width: '100%', height: 'auto' }} />
+          <h1 className='bienvenida2'>NazariSUSHI</h1>
+        </div>
       </div>
 
       <div>
-          <Carrousel/>
+        <Carrousel />
       </div>
-    
     </>
-  )
-}
+  );
+};
 
 export default Home;
