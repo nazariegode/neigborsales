@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Footer.scss';
-import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const [email, setEmail] = useState('');  // Maneja el estado del email
@@ -13,7 +14,6 @@ const Footer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Aquí puedes agregar una validación básica del email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setMessage('Por favor ingresa un email válido.');
@@ -21,7 +21,6 @@ const Footer = () => {
     }
 
     try {
-      // Simulación del envío del email a un servidor backend
       const response = await fetch('/api/send-newsletter', {
         method: 'POST',
         headers: {
@@ -59,23 +58,26 @@ const Footer = () => {
               href="https://www.instagram.com/nazarisushi/?hl=es"
               target="_blank"
               rel="noopener noreferrer"
-              className="fa fa-instagram"
               aria-label="Instagram"
-            ></a>
+            >
+              <FontAwesomeIcon icon={faInstagram} size="1x" />
+            </a>
             <a
               href="https://ms-my.facebook.com/dnazariego/"
               target="_blank"
               rel="noopener noreferrer"
-              className="fa fa-facebook"
               aria-label="Facebook"
-            ></a>
+            >
+              <FontAwesomeIcon icon={faFacebook} size="1x" />
+            </a>
             <a
               href="https://wa.me/56964040431"
               target="_blank"
               rel="noopener noreferrer"
-              className="fa fa-whatsapp"
               aria-label="WhatsApp"
-            ></a>
+            >
+              <FontAwesomeIcon icon={faWhatsapp} size="1x" />
+            </a>
           </div>
         </div>
 
@@ -98,7 +100,7 @@ const Footer = () => {
               Unirme
             </button>
           </form>
-          {message && <p className="confirmation-message">{message}</p>}  {/* Mensaje de confirmación */}
+          {message && <p className="confirmation-message">{message}</p>}
         </div>
       </div>
 

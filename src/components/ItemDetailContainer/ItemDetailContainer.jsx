@@ -46,10 +46,10 @@ const ItemDetailContainer = () => {
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
-          backgroundColor: "#c81c1c"
+          backgroundColor: "#ffff"
         }}
       >
-        <Spinner animation="border" role="status">
+        <Spinner animation="border" role="status" variant="dark">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
       </div>
