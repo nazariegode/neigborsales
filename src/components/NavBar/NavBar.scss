@@ -52,7 +52,7 @@
     .header_nav {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 5px;
         z-index: 1; // Asegúrate de que el contenido del menú esté por encima del fondo
         background-color: #0000006f;
 
@@ -62,42 +62,43 @@
             flex-direction: column;
             background-color: #000000;
             position: absolute;
-            top: 60px;
+            top: 100%;
             left: 0;
             width: 100%;
             text-align: center;
-            padding: 10px 0; // Ajuste de padding
-            z-index: 2; // Asegúrate de que el menú desplegable esté por encima del contenido
+            padding: 10px 0px; // Ajuste de padding
+            z-index: 1; // Asegúrate de que el menú desplegable esté por encima del contenido
         }
 
         &.open {
             display: flex;
-            background-color: #00000053;
-
+            background-color: #000000;
+            color: #ff0000;
         }
 
         .header_link {
             color: #ff0000;
-            font-size: 18px;
+            font-size: 15px;
             text-decoration: none;
             text-transform: uppercase;
             font-family: 'Trebuchet MS';
 
             @media (max-width: 768px) {
                 font-size: 15px;
-                padding: 10px 0;
+                padding: 0px;
+                color: #ff0000;
             }
         }
 
         .custom-dropdown {
-            font-size: 18px;
+            font-size: 15px;
             font-family: 'Trebuchet MS';
             color: #ff0000;
 
 
             .dropdown-menu {
-                background-color: #000000;
-                font-size: 16px;
+                background-color: #ffffff;
+                font-size: 15px;
                 font-family: 'Trebuchet MS';
                 border: none; // Evitar borde por defecto
                 box-shadow: none; // Eliminar sombra
@@ -105,11 +106,12 @@
 
                 @media (max-width: 768px) {
                     position: static; // Mantener posición estática en pantallas pequeñas
+                    
                 }
             }
 
             .dropdown-item {
-                color: #c81c1c;
+                color: #ff0000;
 
                 &.active,
                 &:hover {
@@ -121,6 +123,6 @@
     }
 
     .cart_widget {
-        order: 3; // Mover carrito al final en pantallas pequeñas
+        order: 3; 
     }
 }

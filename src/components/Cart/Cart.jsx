@@ -27,14 +27,14 @@ const Cart = () => {
   }
 
   return (
-    <div className="container my-3">
-      <div className="cart-items">
+    <div className="container d-flex col my-3">
+      <div className="cart-items d-flex col-5">
         {cart.map((producto) => (
           <div className="d-flex mb-1" key={producto.id}>
-            <div className="flex-shrink-0">
+            <div className="flex">
               <Card.Img className="product-image" src={producto.img} />
             </div>
-            <div className="flex-grow-2 ms-1">
+            <div className="flex-grow-4 ms-1">
               <Card className="ItemContent">
                 <Card.Body className="Card-body">
                   <Card.Title>{producto.producto}</Card.Title>
@@ -67,15 +67,15 @@ const Cart = () => {
           </div>
         ))}
       </div>
-      <div className="cart-summary">
+      <div className="cart-summary col-5">
         <h2>Resumen de tu compra</h2>
         <div className="cart-total">
           <h5>Total compra: $ {totalCompra()}</h5>
           <hr />
-          <button onClick={vaciarCarrito} className="btn btn-danger">
+          <button onClick={vaciarCarrito} className="btn btn-danger w-100">
             Vaciar carrito
           </button>
-          <Link to="/checkout" onClick={procesarCompra} className="btn btn-success mx-2">
+          <Link to="/checkout" onClick={procesarCompra} className="btn btn-success w-100">
             Terminar mi compra
           </Link>
         </div>
