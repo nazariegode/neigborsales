@@ -1,85 +1,178 @@
-
-.container {
+/* Existing styles for the cart component */
+.cart-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  margin: 20px;
+
+  @media (max-width: 576px) {
+    margin: 10px;
+  }
 }
 
-.product-image{
-  border: 1px solid black;
-}
+/* Style for empty cart message */
+.cart-empty {
+  h2 {
+    margin-bottom: 1rem;
+  }
 
-
-.cart-items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.cart-total {
-  margin-left: auto; 
-}
-.product-image {
-  width: 300px; 
-  height: 190px; 
-  border-radius: 5px; 
-}
-
-.ItemCard{
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
-    margin-top: 5px;
-    font-family:'Trebuchet MS';
-    }
-
-.ItemContent {
-    display: gap;
-    font-size: 12px;
-    width: 20rem; 
-    border: 1px solid black;
-}
-
-.Card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    width: 300px;
-    height: auto;
-    font-size: 15px;
-}
-
-.Card-image{
+  .btn {
+    margin-top: 1rem;
     width: 100%;
-    height: 260px;  
-    border: 1px solid black;
+    /* Ensure button takes full width on small screens */
+  }
 }
 
-.cart-summary{
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
+/* Style for the list of items in the cart */
+.cart-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 }
 
+/* Style for individual cart item */
+.card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  max-width: 100%;
+  width: 800px;
+  margin-bottom: 1rem;
+  /* Add spacing between cards */
+  position: relative;
+  /* Ensure that .card-buttons is positioned relative to .card */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    /* Stack image and content vertically on small screens */
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-md-5,
+  .col-md-7 {
+    padding: 0;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    padding: 15px;
+
+    /* Apply margin-top only on large screens */
+    @media (min-width: 992px) {
+      margin-top: 20px;
+      /* Adjust this value as needed */
+      margin-left: 10px;
+      /* Adjust this value as needed */
+    }
+  }
+
+  .card-buttons {
+    display: flex;
+    justify-content: center;
+    /* Center buttons horizontally */
+    align-content: center;
+    gap: 10px;
+    font-size: 14px;
+    padding: 10px;
+    bottom: 5px;
+  }
+
+  .card-title,
+  .card-text {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Style for the summary section */
+.cart-summary {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 540px;
+
+  @media (max-width: 576px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .cart-total {
+    margin-top: 20px;
+  }
+}
+
+/* Style for buttons */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000;
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition */
+  width: 100%;
+  /* Ensure button takes full width */
+  max-width: 200px;
+  /* Max width for larger screens */
+}
+
+/* Specific button styles */
+.btn-cart {
+  background-color: #000;
+  /* Black background */
+  color: #fff;
+  /* White text */
+
+  &:hover {
+    background-color: #ff0019;
+    /* Red background on hover */
     color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Trebuchet MS';
-    font-size: 12px;
-    margin-bottom: 10px; 
+    /* White text */
   }
-  
-  .btn:hover {
+}
+
+.btn-resume {
+  background-color: #000;
+  /* Black background */
+  color: #fff;
+  /* White text */
+
+  &:hover {
+    background-color: #ff0019;
+    /* Red background on hover */
     color: #fff;
-    background-color: #ff0000;
+    /* White text */
   }
-  
+}
+
+.cart-total-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}

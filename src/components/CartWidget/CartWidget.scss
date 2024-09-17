@@ -1,24 +1,25 @@
-.custom-cart-icon {
-    color: #c81c1c;  
+.cart-widget {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .cart-icon {
-    color: #ff0000; 
-    font-size: 25px; 
-    text-decoration: none;
-  }
-  
-  .cart-number {
-    color: #ff0000; 
-    font-size: 12px; 
-    border-radius:4px;
-    background-color: #ffffff;
-    padding: 2px;
-    margin-left: 5px;
-    text-decoration: none; 
-    font-family:'Trebuchet MS';
-  }
+  color: #ff0000; 
+  font-size: 25px; 
+}
 
-.cart-widget{
-    text-decoration: none;
+.cart-number {
+  color: #ff0000; /* Color del texto */
+  font-size: 10px; 
+  border-radius: 50%; /* Esto hace que el elemento sea un círculo */
+  background-color: #ffffff; /* Color de fondo del círculo */
+  width: 15px; /* Ancho del círculo */
+  height: 15px; /* Alto del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1px; /* Espacio entre el ícono y el número */
+  text-decoration: none; 
+  font-family: 'Trebuchet MS';
 }

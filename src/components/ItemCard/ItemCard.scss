@@ -1,48 +1,73 @@
-.ItemCard{
+.ItemCard {
     display: flex;
-    justify-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
-    margin-top: 5px;
-    font-family:'Trebuchet MS';
-    }
-
-.ItemContent {
-    display: gap;
-    font-size: 12px;
-    width: 20rem;
+    justify-content: center; /* Centra la tarjeta en el contenedor */
+    margin: 20px 0;
+    font-family: 'Trebuchet MS';
+    width: 100%;
 }
 
-.Card-body {
+.card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    width: 300px;
-    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Para evitar que la imagen sobresalga del contenedor */
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 18rem; /* Ancho máximo para la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
 }
 
-.Card-image{
+.card-img-top {
     width: 100%;
-    height: 200px;    
+    height: auto; /* La altura se ajusta automáticamente según el contenido */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Trebuchet MS';
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-  
-  .btn:hover {
-    color: #fff;
-    background-color: #ff0000;
-  }
-  
+.card-body {
+    padding: 1.25rem; /* Espaciado del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color primario del botón */
+    border-color: #007bff;
+    &:hover {
+        background-color: #0056b3; /* Color al pasar el ratón sobre el botón */
+        border-color: #004085;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        max-width: 16rem; /* Ajusta el ancho máximo para pantallas medianas */
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        max-width: 14rem; /* Ajusta el ancho máximo para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* La tarjeta ocupa el ancho completo en pantallas pequeñas */
+    }
+
+    .card-img-top {
+        height: auto; /* La imagen se ajusta automáticamente en pantallas pequeñas */
+    }
+
+    .card-body {
+        padding: 0.5rem; /* Reduce el padding en pantallas pequeñas */
+    }
+}

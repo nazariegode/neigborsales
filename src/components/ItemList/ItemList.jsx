@@ -5,15 +5,13 @@ import './ItemList.scss'
 const ItemList = ({ productos }) => {
 
     return (
-        <div className='Flex'> 
-            <div className="container">
+            <div className="container-list">
                 {
                     productos.map((producto) => (
                         <ItemCard key={producto.id} producto={producto}/>
                     ))
                 }
             </div>
-        </div>
     )
 }
 

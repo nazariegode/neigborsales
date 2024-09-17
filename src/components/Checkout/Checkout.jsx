@@ -22,13 +22,28 @@ const Checkout = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newOrderId = uuidv4();
-
     setOrderId(newOrderId);
-  };
+
+    try {
+        await fetch('http://localhost:5000/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ...formData,
+                cart,
+            }),
+        });
+    } catch (error) {
+        console.error('Error sending email:', error);
+    }
+};
+
 
   return (
     <div className="container my-5">

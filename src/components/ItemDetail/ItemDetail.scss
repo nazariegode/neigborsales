@@ -1,59 +1,21 @@
-.bkg {
-    background-color: #ff0000;
-    padding: 50px;
+.card-detail {
+    margin-bottom: 1rem; /* Añade un margen inferior */
 }
 
-.card-detail{
-    display: flex;
-    justify-content: center;
-    font-family:'Trebuchet MS';
-    font-size: 20px;
+.card-img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: auto;
 }
 
-.ItemCard{
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
-    margin-top: 5px;
-    font-family:'Trebuchet MS';
-    }
-
-.ItemContent {
-    display: gap;
-    font-size: 12px;
-    width: 20rem;
-}
-
-.Card-body Card-body{
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    width: 300px;
     height: auto;
 }
 
-.Card-image{
-    width: 100%;
-    height: 260px;    
+.h2{
+    font-size: 30px;
 }
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Trebuchet MS';
-    font-size: 12px;
-    margin-bottom: 10px; 
-  }
-  
-  .btn:hover {
-    color: #fff;
-    background-color: #ff0000;
-  }
-  

@@ -1,18 +1,41 @@
-
+/* Checkout.scss */
 form {
-    background: #ff0000;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: #fff;
+  background: #ff0000;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  form {
+      padding: 15px;
   }
-  
+
   form h2 {
-    font-size: 15px;
+      font-size: 1.2rem;
   }
-  
- 
-  
- 
-  
-  
+}
