@@ -17,7 +17,7 @@ const Cart = () => {
       <div className="cart-empty text-center my-5">
         <h2>Tu carrito está vacío</h2>
         <hr />
-        <Link className="btn btn-resume" to="/productos">
+        <Link className="btn-hola" to="/productos">
           Volver a productos
         </Link>
       </div>
@@ -70,7 +70,7 @@ const Cart = () => {
           </div>
 
           <div className="row">
-            <div className="col">Total Compra: ${totalCompra()}</div>
+            <div className="col prices">Total Compra: ${totalCompra()}</div>
           </div>
           <button className="btn btn-proccess">
             <Link to="/checkout" className="text-white text-decoration-none">Procesar Compra</Link>

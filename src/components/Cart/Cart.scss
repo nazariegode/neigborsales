@@ -139,6 +139,27 @@ select, input {
   }
 }
 
+.btn-hola {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  text-decoration: none;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #000000;
+  }
+}
+
+
 .product-quantity {
   display: inline-block;
   width: 30px;
