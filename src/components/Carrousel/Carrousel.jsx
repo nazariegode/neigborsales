@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carrousel.scss';
-import card1 from '../../assets/card1.JPG';  // Importa las imágenes correctamente
-import card2 from '../../assets/card2.JPG';
-import card3 from '../../assets/card3.JPG';
+import card1 from '/assets/card1.JPG';  // Importa las imágenes correctamente
+import card2 from '/assets/card2.JPG';
+import card3 from '/assets/card3.JPG';
 
 function DarkVariantExample() {
   return (

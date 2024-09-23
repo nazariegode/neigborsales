@@ -1,5 +1,5 @@
 import React from 'react';
-import fondo from '../../assets/fondo.png';
+import fondo from '/public/assets/fondo.png';
 import './Home.scss';
 import Carrousel from '../Carrousel/Carrousel';
 
