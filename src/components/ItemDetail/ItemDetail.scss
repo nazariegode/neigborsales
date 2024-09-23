@@ -1,10 +1,21 @@
+.bkg {
+    background-color: #f8f9fa; /* Fondo claro para el detalle del producto */
+    padding: 2rem; /* Espaciado para el contenido */
+}
+
 .card-detail {
     margin-bottom: 1rem; /* Añade un margen inferior */
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para la tarjeta */
+    padding: 1.5rem; /* Padding interno para la tarjeta */
 }
 
 .card-img {
     width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
-    height: auto;
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
 }
 
 .card-body {
@@ -12,10 +23,37 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: 300px;
-    height: auto;
+    padding: 1.5rem;
 }
 
-.h2{
+.h2 {
     font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #000000; /* Rojo */
+    color: #fff; /* Blanco */
+    
+    &:hover {
+        background-color: #ff0019; /* Rojo más oscuro */
+        color: #fff;
+    }
+}
+
+
+.text-center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .card-detail {
+        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .card-body {
+        padding: 1rem; /* Ajusta el padding interno para pantallas pequeñas */
+    }
 }

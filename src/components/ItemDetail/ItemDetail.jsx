@@ -22,9 +22,9 @@ const ItemDetail = ({ productos }) => {
                             <Card.Body className='card-body'>
                                 <Card.Title className="h2 mb-2"><strong>{producto.producto}</strong></Card.Title>
                                 <Card.Text className="">{producto.descripcion}</Card.Text>
-                                <Card.Text className="text-success h5">Precio: ${producto.precio}</Card.Text>
+                                <Card.Text className="h5">Precio: ${producto.precio}</Card.Text>
                                 <div className=" w-100">
-                                    <ItemCount producto={producto} />
+                                    <ItemCount className="buttons-detail" producto={producto} />
                                 </div>
                             </Card.Body>
                         </div>
@@ -32,7 +32,7 @@ const ItemDetail = ({ productos }) => {
                 </div>
             ))}
             <div className="text-center">
-            <Link to={`/productos/`} className="btn btn-outline-primary w-50">Volver a la categoría</Link>
+            <Link to={`/productos/`} className="btn w-5 my-3">Volver a la categoría</Link>
             </div>
         </div>
     );

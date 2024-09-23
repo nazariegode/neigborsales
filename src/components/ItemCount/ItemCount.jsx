@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../Context/CartContext';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import './ItemCount.scss'; // Importa tus estilos personalizados
 
 const ItemCount = ({ producto }) => {
   const { agregarAlCarrito } = useContext(CartContext);
@@ -27,16 +28,16 @@ const ItemCount = ({ producto }) => {
   }
 
   return (
-    <>
+    <div className="button-container">
       <ButtonGroup aria-label="Basic example">
-        <Button variant="secondary" onClick={restar}>Restar</Button>
+        <Button className="btn-custom-black" onClick={restar}>Restar</Button>
         <Button variant="secondary">{contador}</Button>
-        <Button variant="secondary" onClick={() => setContador(contador + 1)}>Sumar</Button>
+        <Button className="btn-custom-black" onClick={() => setContador(contador + 1)}>Sumar</Button>
       </ButtonGroup>
       <ButtonGroup aria-label="Basic example">
-        <Button variant="secondary" onClick={agregarAlCarritoClick}>Agregar al carrito</Button>
+        <Button className="btn-custom-black" onClick={agregarAlCarritoClick}>Agregar al carrito</Button>
       </ButtonGroup>
-    </>
+    </div>
   )
 }
 
