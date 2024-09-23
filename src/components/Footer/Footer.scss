@@ -75,18 +75,25 @@
   border-radius: 5px;
 }
 
-.btn-submit {
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.btn-news {
+  background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.btn-submit:hover {
-  background-color: #5b1313d3;
+.btn-news:hover {
+  background-color: #ffffff;
+  color: #ff0000;
 }
 
 .footer-bottom {

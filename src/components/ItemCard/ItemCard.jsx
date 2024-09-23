@@ -1,22 +1,32 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemCard.scss';
-import ItemCount from '../ItemCount/ItemCount';
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card'; // Si necesitas seguir usando Card
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../Context/CartContext';
 
 const ItemCard = ({ producto }) => {
+    const { agregarAlCarrito } = useCartContext();
+
+    const handleAddToCart = () => {
+        agregarAlCarrito(producto);
+    };
+
     return (
         <div className='ItemCard'>
             <Card className='ItemContent'>
                 <div className='Card-image-container'>
                     <Card.Img className='Card-image' src={producto.img} />
                 </div>
-                <Card.Body className='Card-body'>
-                    <Card.Title>{producto.producto}</Card.Title>
-                    <Card.Text>Precio: ${producto.precio}</Card.Text>
-                    <Link className='btn btn-primary' to={`/item/${producto.id}`}>Ver detalle</Link>
-                    <ItemCount producto={producto} />
-                </Card.Body>
+                <div className='Card-body'>
+                    <h4 className='titulo'>{producto.producto}</h4>
+                    <p className='precio'>Precio: ${producto.precio}</p>
+
+                    <Link className='btn btn-detail' to={`/item/${producto.id}`}>
+                        Ver detalle
+                    </Link>
+                    <button className='btn btn-add' onClick={handleAddToCart}>
+                        Agregar al carrito
+                    </button>
+                </div>
             </Card>
         </div>
     );

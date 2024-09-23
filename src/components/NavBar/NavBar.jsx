@@ -32,10 +32,10 @@ const NavBar = () => {
                 <nav className={`header_nav ${isMenuOpen ? 'open' : ''}`}>
                     <Link className="header_link" to="/" onClick={handleLinkClick}>Inicio</Link>
                     <NavDropdown title="PRODUCTOS" className="custom-dropdown" onClick={(e) => e.stopPropagation()}>
-                        <NavDropdown.Item as={NavLink} to="/productos" onClick={handleLinkClick} activeClassName="active">TODOS LOS PRODUCTOS</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/sushi" onClick={handleLinkClick} activeClassName="active">SUSHI ROLLS</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/compartir" onClick={handleLinkClick} activeClassName="active">PARA COMPARTIR</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/bebidas" onClick={handleLinkClick} activeClassName="active">BEBIDAS</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos" onClick={handleLinkClick} activeClassName="active">Todos los productos</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/sushi" onClick={handleLinkClick} activeClassName="active">Sushi Rolls</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/compartir" onClick={handleLinkClick} activeClassName="active">Para compartir</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/bebidas" onClick={handleLinkClick} activeClassName="active">Bebidas</NavDropdown.Item>
                     </NavDropdown>
                     <Link className="header_link" to="/nosotros" onClick={handleLinkClick}>Nosotros</Link>
                 </nav>

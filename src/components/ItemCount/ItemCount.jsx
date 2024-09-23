@@ -31,7 +31,7 @@ const ItemCount = ({ producto }) => {
     <div className="button-container">
       <ButtonGroup aria-label="Basic example">
         <Button className="btn-custom-black" onClick={restar}>Restar</Button>
-        <Button variant="secondary">{contador}</Button>
+        <Button variant="contador">{contador}</Button>
         <Button className="btn-custom-black" onClick={() => setContador(contador + 1)}>Sumar</Button>
       </ButtonGroup>
       <ButtonGroup aria-label="Basic example">

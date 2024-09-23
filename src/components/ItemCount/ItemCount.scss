@@ -1,20 +1,47 @@
-/* ItemCount.scss */
 .button-container {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Espaciado entre los grupos de botones */
-  justify-content: center; /* Centra el contenido en el contenedor */
+  gap: 1rem; /* Espaciado entre los botones */
+  justify-content: flex-start;
   margin-top: 1rem;
 }
 
 .btn-custom-black {
-  background-color: black;
+  background-color: #212121; /* Un negro más suave */
   color: white;
   border: none;
-  transition: background-color 0.3s ease;
+  border-radius: 50%; /* Botón redondo */
+  width: 50px; /* Ajustamos el tamaño */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Agregamos una sombra suave */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-custom-black:hover {
-  background-color: red;
-  color: white;
+  background-color: #ff5252; /* Un rojo vibrante al hacer hover */
+  transform: scale(1.1); /* Animación de escalado */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35); /* Incrementa la sombra */
+}
+
+.btn-custom-black:active {
+  transform: scale(0.95); /* Pequeña animación al presionar */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+button[variant="contador"] {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem; /* Hacemos el número un poco más grande */
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Desactiva la interacción */
 }

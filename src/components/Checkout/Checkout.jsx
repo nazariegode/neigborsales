@@ -5,10 +5,13 @@ import { v4 as uuidv4 } from 'uuid';
 import "./Checkout.scss";
 
 const Checkout = () => {
-  const { cart, totalCompra, vaciarCarrito } = useCartContext();
+  const { cart, vaciarCarrito } = useCartContext(); // Asegúrate de que vaciarCarrito esté disponible
   const [formData, setFormData] = useState({
     nombre: '',
+    apellido: '',
     direccion: '',
+    comuna: '',
+    telefono: '',
     email: '',
   });
 
@@ -24,94 +27,122 @@ const Checkout = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const newOrderId = uuidv4();
     setOrderId(newOrderId);
 
     try {
-        await fetch('http://localhost:5000/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                ...formData,
-                cart,
-            }),
-        });
+      await fetch('http://localhost:5000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          cart,
+        }),
+      });
     } catch (error) {
-        console.error('Error sending email:', error);
+      console.error('Error sending email:', error);
     }
-};
+  };
 
+  const handleBackToHome = () => {
+    vaciarCarrito(); // Vacía el carrito al volver al inicio
+  };
 
   return (
-    <div className="container my-5">
+    <div className="checkout">
       {orderId ? (
-        <div>
-          <h2>Tu compra se registró correctamente!</h2>
-          <hr />
-          <p>
-            Tu número de compra es: <strong>{orderId}</strong>
-          </p>
-          <Link to="/" className="btn btn-primary">
-            Volver al inicio
-          </Link>
+        <div className="confirmation">
+          <h1>¡FELICIDADES!</h1>
+          <h2>Tu compra se registró correctamente</h2>
+          <p>Revisa en tu email tu bandeja de entrada, tal vez en los "no deseados" encontrarás el detalle de tu compra.</p>
+          <p>Tu compra se registró bajo el número de compra:</p>
+          <p><strong>{orderId}</strong></p>
+          <p>¡Te esperamos de vuelta pronto!</p>
+          <Link to="/" className="btn btn-summit" onClick={handleBackToHome}>Volver al inicio</Link>
         </div>
       ) : (
         <div>
-          <h2>Checkout</h2>
+          <h2>Proceso de Compra</h2>
           <hr />
           <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="nombre" className="form-label">
-                Nombre:
-              </label>
+            <div className="form-group">
+              <label htmlFor="nombre">Nombre:</label>
               <input
                 type="text"
-                className="form-control"
                 id="nombre"
                 name="nombre"
+                placeholder='Ej: Pedro'
                 value={formData.nombre}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="mb-3">
-              <label htmlFor="direccion" className="form-label">
-                Dirección:
-              </label>
+            <div className="form-group">
+              <label htmlFor="apellido">Apellido:</label>
               <input
                 type="text"
-                className="form-control"
+                id="apellido"
+                placeholder='Ej: Pérez'
+                name="apellido"
+                value={formData.apellido}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="direccion">Dirección:</label>
+              <input
+                type="text"
                 id="direccion"
+                placeholder='Ej: Calle venezuela #300'
                 name="direccion"
                 value={formData.direccion}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email:
-              </label>
+            <div className="form-group">
+              <label htmlFor="comuna">Comuna:</label>
+              <input
+                type="text"
+                id="comuna"
+                placeholder='Ej: Providencia'
+                name="comuna"
+                value={formData.comuna}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                placeholder='Ej: +569 987654321'
+                name="telefono"
+                value={formData.telefono}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
               <input
                 type="email"
-                className="form-control"
                 id="email"
+                placeholder='Ej: pedroperez@gmail.com'
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
-            <button type="submit" className="btn btn-success">
-              Finalizar Compra
-            </button>
+            <button type="submit" className="btn btn-submit">Finalizar Compra</button>
+            <Link to="/cart" className="btn btn-return">Volver al Carrito</Link>
           </form>
-          <Link to="/cart" className="btn btn-primary mt-3">
-            Volver al Carrito
-          </Link>
         </div>
       )}
     </div>

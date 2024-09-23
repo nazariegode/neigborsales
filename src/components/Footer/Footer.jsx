@@ -92,11 +92,11 @@ const Footer = () => {
               name="email"
               value={email}
               onChange={handleEmailChange}
-              placeholder="Ingresa tu email aquí"
+              placeholder="Ej: pedroperez@gmail.com"
               className="form-input"
               required
             />
-            <button type="submit" className="btn-submit">
+            <button type="submit" className="btn-news">
               Unirme
             </button>
           </form>

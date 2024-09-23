@@ -25,10 +25,6 @@
     .header_logo {
         width: 60px;
         height: 40px;
-
-        @media (max-width: 768px) {
-            // Opcional: ajustes específicos para pantallas pequeñas si es necesario
-        }
     }
 
     .header_toggle {
@@ -38,7 +34,7 @@
         font-size: 15px;
         color: #ff0000;
         cursor: pointer;
-        z-index: 2; // Asegúrate de que el botón esté por encima del menú desplegable
+        z-index: 2;
 
         @media (max-width: 768px) {
             display: block;
@@ -52,10 +48,9 @@
     .header_nav {
         display: flex;
         align-items: center;
-        gap: 5px;
-        z-index: 1; // Asegúrate de que el contenido del menú esté por encima del fondo
+        gap: 15px; // Aumentar la separación entre los enlaces
+        z-index: 1;
         background-color: #0000006f;
-
 
         @media (max-width: 768px) {
             display: none;
@@ -66,8 +61,8 @@
             left: 0;
             width: 100%;
             text-align: center;
-            padding: 10px 0px; // Ajuste de padding
-            z-index: 1; // Asegúrate de que el menú desplegable esté por encima del contenido
+            padding: 10px 0px;
+            z-index: 1;
         }
 
         &.open {
@@ -95,18 +90,16 @@
             font-family: 'Trebuchet MS';
             color: #ff0000;
 
-
             .dropdown-menu {
                 background-color: #ffffff;
                 font-size: 15px;
                 font-family: 'Trebuchet MS';
-                border: none; // Evitar borde por defecto
-                box-shadow: none; // Eliminar sombra
-                position: static; // Asegurar que el menú desplegable sea estático en pantallas pequeñas
+                border: none;
+                box-shadow: none;
+                position: static;
 
                 @media (max-width: 768px) {
-                    position: static; // Mantener posición estática en pantallas pequeñas
-                    
+                    position: static; 
                 }
             }
 
