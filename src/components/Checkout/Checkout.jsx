@@ -58,7 +58,7 @@ const Checkout = () => {
           <h2>Tu compra se registró correctamente</h2>
           <p>Revisa en tu email tu bandeja de entrada, tal vez en los "no deseados" encontrarás el detalle de tu compra.</p>
           <p>Tu compra se registró bajo el número de compra:</p>
-          <p><strong>{orderId}</strong></p>
+          <h5><strong>{orderId}</strong></h5>
           <p>¡Te esperamos de vuelta pronto!</p>
           <Link to="/" className="btn btn-summit" onClick={handleBackToHome}>Volver al inicio</Link>
         </div>

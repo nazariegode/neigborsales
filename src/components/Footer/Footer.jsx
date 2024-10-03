@@ -17,6 +17,7 @@ const Footer = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setMessage('Por favor ingresa un email válido.');
+      clearMessageAfterDelay();
       return;
     }
 
@@ -38,6 +39,14 @@ const Footer = () => {
     } catch (error) {
       setMessage('Ocurrió un error. Por favor intenta nuevamente.');
     }
+    clearMessageAfterDelay();
+  };
+
+  // Función para borrar el mensaje después de 3 segundos
+  const clearMessageAfterDelay = () => {
+    setTimeout(() => {
+      setMessage('');
+    }, 3000); // 3 segundos
   };
 
   return (
