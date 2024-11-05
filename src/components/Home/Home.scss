@@ -1,118 +1,123 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .home-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
-    display: flex;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: rgb(19, 86, 148); /* Fondo azul */
+  color: white;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 10px;
+}
+
+.text-section {
+  flex: 1;
+  font-family: "Dosis", sans-serif;
+  color: #F3C623;
+  padding: 0px 0px;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 1rem;
+  font-family: "Dosis", sans-serif;
+  color: #F3C623;
+  font-weight: 600;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  font-family: "Dosis", sans-serif;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-primary {
+  color: #F3C623;
+  background-color: #10375C;
+}
+
+.btn-secondary {
+  color: #10375C;
+  background-color: #F3C623;
   
-  .background-image {
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 60px;
+    margin-bottom: 1rem;
+    font-family: "Dosis", sans-serif;
+    color: #F3C623; 
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    font-family: "Dosis", sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  .btn-primary, .btn-secondary {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que la imagen cubra completamente el contenedor */
-    position: absolute; /* La imagen queda detrás del texto */
-    top: 0;
-    left: 0;
-    z-index: -1; /* La imagen estará detrás del texto */
   }
-  
-  .text-container {
-    color: white;
-    justify-content: start;
-    align-items: start;
-    margin-left: 50px;
-    margin-top: 350px;
-  }
-  
-  .bienvenida {
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'Trebuchet MS';
-    margin: 0px;
-  }
-  
-  .bienvenida2 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-family: 'Trebuchet MS';
-  }
-  
-  /* Media Queries para hacer el texto responsivo */
-  @media (max-width: 1024px) {
-    .bienvenida {
-      font-size: 2.5rem;
-      margin-bottom: 0px;
-    }
-  
-    .bienvenida2 {
-      font-size: 4rem;
-    }
-    .home-container {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
-        display: flex;
-    }
-    .text-container {
-        color: white;
-        justify-content: start;
-        align-items: start;
-        margin-left: 40px;
-        margin-top: 150px;
-      }
-  }
-  
-  @media (max-width: 768px) {
-    .bienvenida {
-      font-size: 2rem;
-      margin-bottom: 0px;
-    }
-  
-    .bienvenida2 {
-      font-size: 3.5rem;
-    }
-    .home-container {
-        position: relative;
-        width: 100%;
-        height: 60vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
-        display: flex;
-    }
-    .text-container {
-        color: white;
-        justify-content: start;
-        align-items: start;
-        margin-left: 40px;
-        margin-top: 150px;
-      }
-  }
-  
-  @media (max-width: 480px) {
-    .bienvenida 
-    {
-      font-size: 1.2rem;
-      margin-bottom: 0px;
-    }
-  
-    .bienvenida2 {
-      font-size: 2.5rem;
-    }
-    .home-container {
-        position: relative;
-        width: 100%;
-        display: flex;
-    }
-    .text-container {
-        color: white;
-        justify-content: start;
-        align-items: start;
-        margin-left: 20px;
-        margin-top: 200px;
-      }
-  }
-  
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import Spinner from 'react-bootstrap/Spinner';
+import spinner from '../../../spinner.gif';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from "../../firebase/config";
 
@@ -14,6 +14,10 @@ const ItemListContainer = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                const timeout = setTimeout(() => {
+                    setLoading(false);
+                }, 50000); 
+
                 const productosCollection = collection(db, 'productos');
                 let querySnapshot;
 
@@ -29,10 +33,13 @@ const ItemListContainer = () => {
                     ...doc.data()
                 }));
 
+                clearTimeout(timeout);
+
                 setProductosFiltrados(productos);
                 setLoading(false);
             } catch (error) {
                 console.error(error);
+                setLoading(false);
             }
         };
 
@@ -51,10 +58,7 @@ const ItemListContainer = () => {
                         backgroundColor: "#ffff"
                     }}
                 >
-                    <Spinner animation="border" role="status" variant="dark">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-
+                    <img src={spinner} alt="Loading..." style={{ width: '300px', height: '300px' }} />
                 </div>
             ) : (
                 <ItemList productos={productosFiltrados} category={category} />

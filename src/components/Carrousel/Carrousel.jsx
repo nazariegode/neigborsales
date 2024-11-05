@@ -1,13 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carrousel.scss';
-import card1 from '/assets/card1.JPG';  // Importa las imágenes correctamente
+import card1 from '/assets/card1.JPG';
 import card2 from '/assets/card2.JPG';
 import card3 from '/assets/card3.JPG';
 
-function DarkVariantExample() {
+function DynamicCarousel() {
   return (
     <div className='carrousel-container'>
-      <Carousel data-bs-theme="dark">
+      <Carousel data-bs-theme="dark" interval={3000} fade>
         <Carousel.Item className="carousel-item">
           <img
             className="d-block w-100"
@@ -34,7 +34,7 @@ function DarkVariantExample() {
           <img
             className="d-block w-100"
             src={card3}
-            alt="Chesse Roll"
+            alt="Cheese Roll"
           />
           <Carousel.Caption>
             <h5>Cheese Roll</h5>
@@ -45,4 +45,4 @@ function DarkVariantExample() {
   );
 }
 
-export default DarkVariantExample;
+export default DynamicCarousel;
