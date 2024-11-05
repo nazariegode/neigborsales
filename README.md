@@ -1,4 +1,4 @@
-# README - Nazarisushi Ecommerce 
+# README - Neigborsales Ecommerce 
 
 Este proyecto es un e-commerce de sushi desarrollado utilizando las siguientes dependencias o herramientas:
 
