@@ -5,34 +5,50 @@
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
   border: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 
   @media (max-width: 768px) {
-    border-radius: 0; // Sin bordes redondeados en pantallas pequeñas
+    border-radius: 0;
   }
 }
 
+.cart-empty {
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
+  padding: 100px;
+}
+
 .cart-items {
-  background-color: #fff;
+  background-color: #10375c;
   padding: 4vh 5vh;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 
   @media (max-width: 768px) {
-    border-radius: 0; // Sin bordes redondeados en pantallas pequeñas
+    border-radius: 0;
   }
 }
 
 .summary {
-  background-color: #ddd;
+  background-color: rgb(19, 86, 148); /* Fondo azul */
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 4vh;
   color: rgb(65, 65, 65);
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 
   @media (max-width: 768px) {
-    border-radius: 0; // Sin bordes redondeados en pantallas pequeñas
+    border-radius: 0;
   }
 }
 
@@ -50,13 +66,18 @@
   width: 100%;
   flex-wrap: nowrap; // Evitar el wrap
   overflow: hidden; // Ocultar desbordamiento
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 
   @media (max-width: 768px) {
     flex-wrap: nowrap; // Evitar el wrap en pantallas pequeñas
   }
 }
 
-.col-2, .col-4, .col-3 {
+.col-2,
+.col-4,
+.col-3 {
   padding: 0 1vh;
   flex: 1; // Asegurar que ocupen espacio igual
 }
@@ -65,6 +86,9 @@
   margin-top: 4.5rem;
   text-decoration: none;
   color: #000;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 }
 
 hr {
@@ -75,7 +99,8 @@ form {
   padding: 2vh 0;
 }
 
-select, input {
+select,
+input {
   border: 1px solid rgba(0, 0, 0, 0.137);
   padding: 1.5vh 1vh;
   margin-bottom: 4vh;
@@ -83,27 +108,32 @@ select, input {
   background-color: rgb(247, 247, 247);
 }
 
-.prices{
+.prices {
   font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ff0019;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #eb8317;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
 }
 
 .btn {
-  background-color: #000;
-  border-color: #000;
-  color: white;
+  color: #f3c623;
+  background-color: #10375c;
   width: 100%;
   font-size: 0.7rem;
   margin-top: 4vh;
   padding: 1vh;
   border-radius: 0;
+  &:hover {
+    color: #f3c623;
+    background-color: #10375c;
+  }
 }
 
 .btn-quantity {
-  background-color: #000;
-  color: white;
+  background-color: rgb(19, 86, 148); /* Fondo azul */
+  color: #f3c623;
   border: none;
   border-radius: 50%;
   width: 20px;
@@ -112,17 +142,17 @@ select, input {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 20px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #333;
+    color: #f3c623;
   }
 }
 
 .btn-proccess {
-  background-color: #ff0000;
-  color: white;
+  color: #f3c623;
+  background-color: #10375c;
   border: none;
   border-radius: 10px;
   width: 100%;
@@ -135,13 +165,14 @@ select, input {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #000000;
+    color: #f3c623;
+    background-color: #10375c;
   }
 }
 
 .btn-hola {
-  background-color: #ff0000;
-  color: white;
+  background-color: #10375c;
+  color: #f3c623;
   border: none;
   border-radius: 10px;
   width: 50%;
@@ -151,27 +182,37 @@ select, input {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
   font-size: 1rem;
   transition: background-color 0.3s ease;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   &:hover {
-    background-color: #000000;
+    color: #f3c623;
+    background-color: #10375c;
   }
 }
 
-
 .product-quantity {
   display: inline-block;
-  width: 30px;
+  width: 25px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 12px;
   color: #000;
   background-color: transparent;
   border: none;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 }
 
 .icon-delete {
-  color: red;
+  color: #f3c623;
   cursor: pointer;
   font-size: 17px;
   transition: color 0.3s ease;
@@ -187,19 +228,27 @@ select, input {
   }
 }
 
-
 .col {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 600;
 }
 
 .product-name {
   font-weight: bold;
   font-size: 1rem;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 }
 
 .product-category {
   font-size: 0.8rem;
   color: #888;
+  font-family: "Dosis", sans-serif;
+  color: #f3c623;
+  font-weight: 400;
 }

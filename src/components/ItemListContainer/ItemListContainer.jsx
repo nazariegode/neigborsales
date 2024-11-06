@@ -16,7 +16,7 @@ const ItemListContainer = () => {
             try {
                 const timeout = setTimeout(() => {
                     setLoading(false);
-                }, 50000); 
+                }, 10000); 
 
                 const productosCollection = collection(db, 'productos');
                 let querySnapshot;

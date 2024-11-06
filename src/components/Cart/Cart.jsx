@@ -41,7 +41,7 @@ const Cart = () => {
                 <div className="col-5 col-md-4 text-left">
                   <div className="product-name">{producto.producto}</div>
                   <div className="product-category">{producto.categoria}</div>
-                  <span className="prices">${producto.precio}</span>
+                  <span className="prices">$ {producto.precio}</span>
                 </div>
                 <div className="col-4 col-md-6 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
@@ -70,9 +70,9 @@ const Cart = () => {
           </div>
 
           <div className="row">
-            <div className="col prices">Total Compra: ${totalCompra()}</div>
+            <div className="col prices">Total Compra: $ {totalCompra()}</div>
           </div>
-          <button className="btn btn-proccess">
+          <button className="btn-proccess">
             <Link to="/checkout" className="text-white text-decoration-none">Procesar Compra</Link>
           </button>
         </div>

@@ -141,8 +141,10 @@ const Checkout = () => {
               />
             </div>
             <button type="submit" className="btn btn-submit">Finalizar Compra</button>
-            <Link to="/cart" className="btn btn-return">Volver al Carrito</Link>
           </form>
+          <div className="back-to-shop">
+            <Link className="back-to-shop" to="/cart">&larr; Volver a carrito</Link>
+          </div>
         </div>
       )}
     </div>
