@@ -31,11 +31,14 @@ const NavBar = () => {
                 
                 <nav className={`header_nav ${isMenuOpen ? 'open' : ''}`}>
                     <Link className="header_link" to="/" onClick={handleLinkClick}>Inicio</Link>
-                    <NavDropdown title="PRODUCTOS" className="custom-dropdown" onClick={(e) => e.stopPropagation()}>
+                    <NavDropdown title="Productos" className="custom-dropdown" onClick={(e) => e.stopPropagation()}>
                         <NavDropdown.Item as={NavLink} to="/productos" onClick={handleLinkClick} activeClassName="active">Todos los productos</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/sushi" onClick={handleLinkClick} activeClassName="active">Sushi Rolls</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/compartir" onClick={handleLinkClick} activeClassName="active">Para compartir</NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/productos/bebidas" onClick={handleLinkClick} activeClassName="active">Bebidas</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Electrodomésticos" onClick={handleLinkClick} activeClassName="active">Electrodomésticos</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Electrónica" onClick={handleLinkClick} activeClassName="active">Electrónica</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Cocina" onClick={handleLinkClick} activeClassName="active">Cocina</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Muebles" onClick={handleLinkClick} activeClassName="active">Muebles</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Deportes" onClick={handleLinkClick} activeClassName="active">Deportes</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Educación" onClick={handleLinkClick} activeClassName="active">Educación</NavDropdown.Item>
                     </NavDropdown>
                     <Link className="header_link" to="/nosotros" onClick={handleLinkClick}>Nosotros</Link>
                 </nav>

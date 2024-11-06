@@ -2,13 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import man from '../../../public/assets/man.png';
 import './Home.scss';
-import Carrousel from '../Carrousel/Carrousel';
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <>
       <div className="main-container">
         <div className="content">
           <div className="image-section">
@@ -34,11 +32,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div>
-        <Carrousel />
-      </div>
-    </>
   );
 };
 

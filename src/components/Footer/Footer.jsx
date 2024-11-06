@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="footer-box">
           <h2>Sobre Nosotros</h2>
           <p>
-          En Tu Vecindario, cada compra es el inicio de una nueva historia. Nos dedicamos a conectar a nuestra comunidad con productos de calidad, creando una experiencia cercana y confiable. Queremos que sientas que compras en tu propio vecindario.          </p>
+          En Neigborsales, cada compra es el inicio de una nueva historia. Nos dedicamos a conectar a nuestra comunidad con productos de calidad, creando una experiencia cercana y confiable. Queremos que sientas que compras en tu propio vecindario.          </p>
         </div>
 
         <div className="footer-box">

@@ -1,0 +1,59 @@
+.cardshome{
+  padding-bottom: 20px;
+  margin: 150px 20px;
+  box-sizing: border-box;
+  color: black;
+  color: #F3C623;
+  font-family: "Dosis", sans-serif;
+
+  @media (max-width: 768px) {
+  margin: 40px;
+  }
+  
+  @media (max-width: 480px) {
+  margin: 20px auto;
+  }
+  
+}
+
+.card{
+  border: none !important;
+  @media (max-width: 768px) {
+    margin: 100px;
+    }
+    
+    @media (max-width: 480px) {
+    margin: 20px;
+    }
+}
+
+.card-image {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+  max-width: 150px; /* Limita el tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+  padding: 15px;
+}
+.card-body{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  color: #F3C623;
+  background-color: rgb(19, 86, 148); /* Fondo azul */
+  font-family: "Dosis", sans-serif;
+  border-radius: 20px;
+}
+
+.card-titulo{
+  color: #F3C623;
+  text-align: justify ;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500 !important;
+}
+
+.card-texto{
+  color: rgb(255, 255, 255);
+  text-align: center ;
+  font-family: "Dosis", sans-serif;
+  font-weight: 200 !important;
+}
