@@ -8,16 +8,19 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log(storedCart); // Verifica que todos los productos tengan `img`
     setCart(storedCart);
   }, []);
+  
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const agregarAlCarrito = (item) => {
+    console.log(item); // Verifica que `img`, `producto`, y `precio` están en `item`
     const existingItem = cart.find((prod) => prod.id === item.id);
-
+  
     if (existingItem) {
       setCart((prevCart) =>
         prevCart.map((prod) =>
@@ -28,6 +31,7 @@ export const CartProvider = ({ children }) => {
       setCart([...cart, { ...item, cantidad: 1 }]);
     }
   };
+  
 
   const eliminarDelCarrito = (id, eliminarCompleto) => {
     const itemIndex = cart.findIndex((prod) => prod.id === id);

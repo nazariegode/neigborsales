@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Spinner from 'react-bootstrap/Spinner';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from "../../firebase/config";
+import spinner from '../../../spinner.gif';
 
 const ItemDetailContainer = () => {
   const [loadingProductos, setLoadingProductos] = useState(true);
@@ -13,21 +13,18 @@ const ItemDetailContainer = () => {
     const fetchData = async () => {
       try {
         const productosCollection = collection(db, 'productos');
-
         const querySnapshot = await getDocs(productosCollection);
-        const productos = [];
 
-        querySnapshot.forEach((doc) => {
-          productos.push({
-            id: doc.id,
-            ...doc.data()
-          });
-        });
+        const productos = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data()
+        }));
 
         setProductosData(productos);
         setLoadingProductos(false);
       } catch (error) {
         setError(error);
+        setLoadingProductos(false);
       }
     };
 
@@ -49,9 +46,7 @@ const ItemDetailContainer = () => {
           backgroundColor: "#ffff"
         }}
       >
-        <Spinner animation="border" role="status" variant="dark">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
+        <img src={spinner} alt="Loading..." style={{ width: '300px', height: '300px' }} />
       </div>
     );
   }

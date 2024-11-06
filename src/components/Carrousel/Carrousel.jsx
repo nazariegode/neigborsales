@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carrousel.scss';
-import card1 from '/assets/card1.JPG';
-import card2 from '/assets/card2.JPG';
-import card3 from '/assets/card3.JPG';
+import card1 from '../../../public/assets/card1.JPG';
+import card2 from '../../../public/assets/card2.JPG';
+import card3 from '../../../public/assets/card3.JPG';
 
 function DynamicCarousel() {
   return (

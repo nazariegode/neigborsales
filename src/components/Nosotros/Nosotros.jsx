@@ -1,4 +1,4 @@
-import chef from '/public/assets/chef.jpeg';
+import chef from '../../../public/assets/icon2.png';
 import '../Nosotros/Nosotros.scss'
 
 const Nosotros = () => {
@@ -8,16 +8,19 @@ const Nosotros = () => {
                 <div className='text'>
                     <strong><h1>ACERCA DE NOSOTROS</h1>
                     <p>
-                        En NAZARISUSHI, creemos en la magia de la comida japonesa auténtica. Con pasión y dedicación, hemos traído los sabores tradicionales del Japón a tu mesa, permitiéndote disfrutar de una experiencia culinaria única.
-                    </p>
+                    En Tu Vecindario, creemos que cada compra es más que una simple transacción; es el inicio de una nueva historia en un nuevo hogar. Nos dedicamos a conectar a nuestra comunidad con productos de calidad, ofreciendo una experiencia de compra cercana y confiable. Desde productos esenciales hasta aquellos que hacen especial tu espacio, cada artículo que encuentras aquí está esperando encontrar su lugar contigo.                    </p>
                     <p>
-                        Nuestra historia comenzó con un amor profundo por el sushi, sashimi y otras delicias japonesas. Desde entonces, nos hemos comprometido a servir platos excepcionales elaborados con los ingredientes más frescos y la técnica más precisa.
-                    </p>
+                    Nuestro lema, "Donde cada venta consigue un nuevo hogar", representa nuestro compromiso de brindar una experiencia única que va más allá de una compra en línea: queremos que sientas que estás comprando en tu vecindario, rodeado de familiaridad, confianza y satisfacción.                    </p>
+                   
                     <p>
-                        Te invitamos a explorar nuestra variada carta de sushi, desde los rollos clásicos hasta creaciones innovadoras. Cada visita a nuestro restaurante es una oportunidad para disfrutar de una deliciosa comida en un ambiente acogedor y relajado.
-                    </p>
-                    <p>
-                        ¡Bienvenido a NAZARISUSHI!
+                    ¡Gracias por ser parte de Tu Vecindario!
+
+
+
+
+
+
+
                     </p></strong>
                 </div>
                 <div className='image'>
