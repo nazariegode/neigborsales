@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import man from '../../../public/assets/man.png';
+import man from '/assets/man.png?url';
 import './Home.scss';
 
 const Home = () => {

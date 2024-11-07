@@ -1,8 +1,8 @@
 import React from "react";
 import "./cardsHome.scss";
-import facil from "../../../public/assets/Facil.svg";
-import sostenibilidad from "../../../public/assets/sostenibilidad.svg";
-import Unicos from "../../../public/assets/Unicos.svg";
+import facil from "/assets/Facil.svg?url";
+import sostenibilidad from "/assets/sostenibilidad.svg?url";
+import Unicos from "/assets/Unicos.svg?url";
 
 function Cards() {
   return (

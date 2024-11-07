@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../../public/assets/icon.png';
+import logo from '/assets/icon.png?url';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.scss';
 

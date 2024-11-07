@@ -1,4 +1,4 @@
-import chef from '../../../public/assets/icon2.png';
+import chef from '/assets/icon2.png?url';
 import '../Nosotros/Nosotros.scss'
 
 const Nosotros = () => {
