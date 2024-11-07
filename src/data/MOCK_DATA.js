@@ -244,9 +244,7 @@ const productos = [
     },
     {
         "id": 28,
-        "producto": "Mac computer
-
-",
+        "producto": "Mac computer",
         "descripcion": "Computadora Mac de alto rendimiento, ideal para trabajos gráficos y programación.",
         "precio": 1000000,
         "img": "/assets/mac_computer.jpg",
@@ -254,4 +252,3 @@ const productos = [
         "stock": 1
     }
 ];
-```

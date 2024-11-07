@@ -62,7 +62,7 @@ const Footer = () => {
           <h2>Síguenos</h2>
           <div className="social-media">
             <a
-              href="https://www.instagram.com/nazarisushi/?hl=es"
+              href="https://www.instagram.com/neigborsales/?hl=es"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -113,7 +113,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <small>
-          2023 <b>Neigborsales</b> - Todos los Derechos Reservados.
+          2024 <b>Neigborsales</b> - Todos los Derechos Reservados.
         </small>
       </div>
     </footer>

@@ -1,71 +1,143 @@
-.bkg {
-    background-color: #f8f9fa; /* Fondo claro para el detalle del producto */
-    padding: 2rem; /* Espaciado para el contenido */
+/* Estilos generales para la página de detalle de producto */
+.item-detail-bkg {
+  background-color: #f8f9fa;
+  padding: 2rem;
 }
 
-.card-detail {
-    margin-bottom: 1rem; /* Añade un margen inferior */
-    background-color: #fff; /* Fondo blanco para la tarjeta */
-    border-radius: 0.25rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para la tarjeta */
-    padding: 1.5rem; /* Padding interno para la tarjeta */
+.item-detail-card {
+  margin-bottom: 1rem;
+  background-color: #10375c;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-img {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 0.25rem; /* Bordes redondeados */
-    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+/* Imagen */
+.item-detail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px !important;
+  object-fit: cover;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    padding: 1.5rem;
+/* Detalles del producto */
+.item-detail-body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
 }
 
-.tittle {
+.item-detail-title {
+    color: #f3c623;
     font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
+    font-weight: 500;
+  margin-bottom: 1rem;
+justify-content: center;}
 
-.description{
-    color: #000000;
-}
-
-.price {
+.item-detail-description {
+    color: #ffffff;
+    font-weight: 200;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ff0019;
+  text-align: left; /* Alineación a la izquierda */
 }
 
-.btn {
-    background-color: #000000; /* Rojo */
-    color: #fff; /* Blanco */
-    
-    &:hover {
-        background-color: #ff0019; /* Rojo más oscuro */
-        color: #fff;
-    }
+.item-detail-price {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: left; /* Alineación a la izquierda */
 }
 
-
-.text-center {
-    text-align: center;
-    margin-top: 2rem;
+.titulo-precio{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 18px;
 }
 
+.precio-precio{
+    color: #f3c623;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Botón Agregar al carrito */
+.item-detail-btn-cart {
+  color: #10375c;
+  background-color: #f3c623;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Sección de cantidad */
+.item-detail-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  width: 50%;
+  padding-top: 50px;
+
+}
+
+.item-detail-btn-quantity {
+  background-color: #f3c623;
+  color: #10375c;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.item-detail-product-quantity {
+  font-size: 1.2rem;
+  text-align: left; /* Alineación a la izquierda */
+}
+
+/* Enlace para volver a productos */
+.back-to-shop {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.link-back {
+  text-decoration: none;
+  color: #f3c623;
+}
 
 @media (max-width: 768px) {
-    .card-detail {
-        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
-    }
+  .item-detail-card {
+    padding: 1rem;
+  }
 
-    .card-body {
-        padding: 1rem; /* Ajusta el padding interno para pantallas pequeñas */
-    }
+  .item-detail-body {
+    padding-left: 10px;
+  }
+
+  .item-detail-btn-cart {
+    width: 100%;
+  }
+  
+  /* Sección de cantidad */
+  .item-detail-quantity {
+    width: 100%;
+    padding-top: 10px;
+  }
+
 }

@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../Context/CartContext';
-import { FaTrashAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Cart.scss';
+import React, { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
+import { FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Cart.scss";
 
 const Cart = () => {
-  const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito, agregarAlCarrito } = useContext(CartContext);
+  const {
+    cart,
+    totalCompra,
+    vaciarCarrito,
+    eliminarDelCarrito,
+    agregarAlCarrito,
+  } = useContext(CartContext);
 
   const procesarCompra = () => {
     vaciarCarrito();
@@ -29,14 +35,20 @@ const Cart = () => {
       <div className="row">
         <div className="col-md-8 cart-items">
           <div className="title">
-            <h4><b>Carrito de Compras</b></h4>
+            <h4>
+              <b>Carrito de Compras</b>
+            </h4>
           </div>
 
           {cart.map((producto) => (
             <div className="row border-top border-bottom" key={producto.id}>
               <div className="row main align-items-center">
                 <div className="col-3 col-md-2">
-                  <img className="img-fluid" src={producto.img} alt={producto.producto} />
+                  <img
+                    className="img-fluid"
+                    src={producto.img}
+                    alt={producto.producto}
+                  />
                 </div>
                 <div className="col-5 col-md-4 text-left">
                   <div className="product-name">{producto.producto}</div>
@@ -45,12 +57,27 @@ const Cart = () => {
                 </div>
                 <div className="col-4 col-md-6 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
-                    <button className="btn-quantity" onClick={() => eliminarDelCarrito(producto.id, false)}>-</button>
-                    <span className="product-quantity">{producto.cantidad}</span>
-                    <button className="btn-quantity" onClick={() => agregarAlCarrito(producto)}>+</button>
+                    <button
+                      className="btn-quantity"
+                      onClick={() => eliminarDelCarrito(producto.id, false)}
+                    >
+                      -
+                    </button>
+                    <span className="product-quantity">
+                      {producto.cantidad}
+                    </span>
+                    <button
+                      className="btn-quantity"
+                      onClick={() => agregarAlCarrito(producto)}
+                    >
+                      +
+                    </button>
                   </div>
                   <div className="d-flex align-items-center">
-                    <FaTrashAlt className="icon-delete" onClick={() => eliminarDelCarrito(producto.id, true)} />
+                    <FaTrashAlt
+                      className="icon-delete"
+                      onClick={() => eliminarDelCarrito(producto.id, true)}
+                    />
                   </div>
                 </div>
               </div>
@@ -58,22 +85,34 @@ const Cart = () => {
           ))}
 
           <div className="back-to-shop">
-            <Link className="back-to-shop" to="/productos">&larr; Volver a productos</Link>
+            <Link className="back-to-shop" to="/productos">
+              &larr; Volver a productos
+            </Link>
           </div>
         </div>
 
         <div className="col-md-4 summary">
-          <h5><b>Resumen</b></h5>
+          <h5>
+            <b>Resumen</b>
+          </h5>
           <hr />
-          <div className="col">
-            Cantidad de Productos: {cart.reduce((total, producto) => total + producto.cantidad, 0)}
+
+          <div className="texto">
+            <span className="titulo-prices">Cantidad de Productos: </span>
+            <span className="pricess">
+              {" "}
+              {cart.reduce((total, producto) => total + producto.cantidad, 0)}
+            </span>
           </div>
 
-          <div className="row">
-            <div className="col prices">Total Compra: $ {totalCompra()}</div>
+          <div className="texto2">
+            <span className="titulo-prices">Total Compra:</span>
+            <span className="pricess"> $ {totalCompra()}</span>
           </div>
           <button className="btn-proccess">
-            <Link to="/checkout" className="text-white text-decoration-none">Procesar Compra</Link>
+            <Link to="/checkout" className="text-white text-decoration-none">
+              Procesar Compra
+            </Link>
           </button>
         </div>
       </div>
