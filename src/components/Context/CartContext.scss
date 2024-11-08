@@ -1,17 +1,62 @@
+/* Estilo general para las notificaciones */
 .custom-toast {
-    background-color: #000000; /* Fondo verde */
-    color: #ffffff; /* Texto blanco */
-    font-family: "Dosis", sans-serif;
-  }
-  
-  .custom-toast-error {
-    background-color: rgb(19, 86, 148); /* Fondo azul */
-    color: #ffffff; /* Texto blanco */
-    font-family: "Dosis", sans-serif;
-  }
-  
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  font-family: "Dosis", sans-serif;
+  padding: 12px 20px; /* Relleno general */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente predeterminado */
+  min-width: 300px; /* Ancho mínimo */
+  max-width: 100%; /* Ancho máximo adaptable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para las notificaciones de error */
+.custom-toast-error {
+  background-color: rgb(19, 86, 148); /* Fondo azul */
+  color: #ffffff; /* Texto blanco */
+  font-family: "Dosis", sans-serif;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 300px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las notificaciones de éxito */
+.custom-toast-success {
+  background-color: rgb(19, 86, 148); /* Fondo azul */
+  color: #ffffff; /* Texto blanco */
+  font-family: "Dosis", sans-serif;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 300px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para pantallas más pequeñas (tabletas, móviles) */
+@media (max-width: 768px) {
+  .custom-toast,
+  .custom-toast-error,
   .custom-toast-success {
-    background-color: rgb(19, 86, 148); /* Fondo azul */
-    color: #ffffff; /* Texto blanco */
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    padding: 10px 15px; /* Reducir el relleno */
+    min-width: 80%; /* Hacer la notificación más ancha */
     font-family: "Dosis", sans-serif;
   }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+  .custom-toast,
+  .custom-toast-error,
+  .custom-toast-success {
+    font-size: 0.8rem; /* Aún más pequeño */
+    padding: 8px 12px; /* Reducir aún más el relleno */
+    min-width: 70%; /* Ajustar el ancho */
+    font-family: "Dosis", sans-serif;
+  }
+}

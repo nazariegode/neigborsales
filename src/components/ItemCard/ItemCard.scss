@@ -81,7 +81,7 @@
 }
 
 .btn-detail {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #10375C;
     border: none;
     border-radius: 10px;
@@ -92,9 +92,8 @@
     align-items: center;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
     gap: 10px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 @media (max-width: 1200px) {

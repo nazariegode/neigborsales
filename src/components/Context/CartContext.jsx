@@ -34,7 +34,7 @@ export const CartProvider = ({ children }) => {
 
     // Notificación al agregar al carrito
     toast.success(`${item.producto} ha sido agregado al carrito!`, {
-      className: "custom-toast-success",
+      className: "custom-toast-success custom-toast-responsive",
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -56,7 +56,7 @@ export const CartProvider = ({ children }) => {
         updatedCart.splice(itemIndex, 1);
         // Notificación de eliminación completa con mensaje dinámico
         toast.error(`${item.producto} ha sido eliminado del carrito!`, {
-          className: 'custom-toast-error',
+          className: "custom-toast-error custom-toast-responsive",
           position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
@@ -72,7 +72,7 @@ export const CartProvider = ({ children }) => {
         }
         // Notificación de eliminación parcial (decremento de cantidad) con mensaje dinámico
         toast.error(`${item.producto} ha sido eliminado del carrito!`, {
-          className: 'custom-toast-error',
+          className: "custom-toast-error custom-toast-responsive",
           position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
