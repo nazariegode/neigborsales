@@ -18,6 +18,14 @@ const Cart = () => {
     vaciarCarrito();
   };
 
+  const handleDelete = (productoId) => {
+    // Mostrar confirmación antes de eliminar el producto
+    const isConfirmed = window.confirm("¿Estás seguro de que quieres eliminar este producto?");
+    if (isConfirmed) {
+      eliminarDelCarrito(productoId, true);
+    }
+  };
+
   if (cart.length === 0) {
     return (
       <div className="cart-empty text-center my-5">
@@ -76,7 +84,7 @@ const Cart = () => {
                   <div className="d-flex align-items-center">
                     <FaTrashAlt
                       className="icon-delete"
-                      onClick={() => eliminarDelCarrito(producto.id, true)}
+                      onClick={() => handleDelete(producto.id)}
                     />
                   </div>
                 </div>

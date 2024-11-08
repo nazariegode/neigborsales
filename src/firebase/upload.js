@@ -1,21 +1,22 @@
-import MOCK_DATA from '../data/MOCK_DATA.json' assert { type: 'json' }
-import { collection, addDoc } from 'firebase/firestore'
-import { db } from './config.js'
+import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { db } from './config.js';
 
+// Referencia a la colección de productos
 const productosRef = collection(db, "productos");
 
-const uploadData = async () => {
-  for (const item of MOCK_DATA) {
-    delete item.id; // Asegúrate de que no hay un campo 'id' en el JSON
-
-    try {
-      await addDoc(productosRef, item);
-      console.log(`Producto agregado: ${JSON.stringify(item)}`);
-    } catch (error) {
-      console.error("Error al agregar el producto: ", error);
-    }
+const cargarProductosDesdeFirestore = async () => {
+  try {
+    // Obtenemos todos los productos desde Firestore
+    const querySnapshot = await getDocs(productosRef);
+    
+    // Recorremos los productos obtenidos
+    querySnapshot.forEach((doc) => {
+      console.log(`Producto ID: ${doc.id}, Datos: ${JSON.stringify(doc.data())}`);
+    });
+  } catch (error) {
+    console.error("Error al obtener los productos: ", error);
   }
 };
 
-// Llama a la función para cargar los datos
-uploadData();
+// Llamamos a la función para cargar los productos
+cargarProductosDesdeFirestore();
