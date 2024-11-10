@@ -42,9 +42,12 @@
   .custom-toast,
   .custom-toast-error,
   .custom-toast-success {
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
-    padding: 10px 15px; /* Reducir el relleno */
-    min-width: 80%; /* Hacer la notificación más ancha */
+    font-size: 14px; /* Aún más pequeño */
+    padding: 8px 12px; /* Reducir aún más el relleno */
+    margin: 5px 50px;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* Ajustar el ancho */
     font-family: "Dosis", sans-serif;
   }
 }
@@ -54,9 +57,12 @@
   .custom-toast,
   .custom-toast-error,
   .custom-toast-success {
-    font-size: 0.8rem; /* Aún más pequeño */
+    font-size: 14px; /* Aún más pequeño */
     padding: 8px 12px; /* Reducir aún más el relleno */
-    min-width: 70%; /* Ajustar el ancho */
+    margin: 5px 60px;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* Ajustar el ancho */
     font-family: "Dosis", sans-serif;
   }
 }
