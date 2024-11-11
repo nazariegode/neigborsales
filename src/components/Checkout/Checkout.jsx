@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../Context/CartContext';
 import { v4 as uuidv4 } from 'uuid';
+import { db } from '../../firebase/config';
+import { collection, addDoc } from 'firebase/firestore';
 import "./Checkout.scss";
 
 const Checkout = () => {
-  const { cart, vaciarCarrito } = useCartContext(); // Asegúrate de que vaciarCarrito esté disponible
+  const { cart, vaciarCarrito } = useCartContext();
   const [formData, setFormData] = useState({
     nombre: '',
     apellido: '',
@@ -14,7 +16,6 @@ const Checkout = () => {
     telefono: '',
     email: '',
   });
-
   const [orderId, setOrderId] = useState(null);
 
   const handleChange = (e) => {
@@ -30,24 +31,39 @@ const Checkout = () => {
     const newOrderId = uuidv4();
     setOrderId(newOrderId);
 
+    // Datos de la orden para almacenar en Firestore
+    const orderData = {
+      orderId: newOrderId,
+      ...formData,
+      cart,
+      date: new Date(), // Fecha de la compra
+    };
+
     try {
-      await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
+      // Almacena en Firestore
+      await addDoc(collection(db, "orders"), orderData);
+
+      // Envía el correo electrónico
+      await fetch("http://localhost:5000/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...formData,
           cart,
         }),
       });
+
+      vaciarCarrito(); // Vacía el carrito si se desea
+
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error al procesar la compra:", error);
     }
   };
 
   const handleBackToHome = () => {
-    vaciarCarrito(); // Vacía el carrito al volver al inicio
+    vaciarCarrito();
   };
 
   return (
@@ -115,7 +131,6 @@ const Checkout = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="telefono">Teléfono:</label>
               <input

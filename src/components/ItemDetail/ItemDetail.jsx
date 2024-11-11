@@ -36,11 +36,19 @@ const ItemDetail = ({ productos }) => {
                 <p className="item-detail-description mb-2">
                   {producto.descripcion}
                 </p>
+
+                <p className="precio">
+                  <span className="precio-text">Marca:</span>
+                  <span className="monto-text">{producto.marca}</span>
+                </p>
+                <p className="precio">
+                  <span className="precio-text">Estado:</span>
+                  <span className="monto-text">{producto.estado}</span>
+                </p>
                 <p className="item-detail-price mb-2">
-                  <span className="titulo-precio">Precio: </span> 
+                  <span className="titulo-precio">Precio: </span>
                   <span className="precio-precio">$ {producto.precio}</span>
                 </p>
-
                 <div className="item-detail-quantity">
                   <button
                     className="item-detail-btn-quantity"

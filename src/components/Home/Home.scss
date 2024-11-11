@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 
 .main-container {
   display: flex;
@@ -24,7 +23,7 @@
 .text-section {
   flex: 1;
   font-family: "Dosis", sans-serif;
-  color: #F3C623;
+  color: #f3c623;
   padding: 0px 0px;
   margin: 0px;
 }
@@ -33,7 +32,7 @@ h1 {
   font-size: 80px;
   margin-bottom: 1rem;
   font-family: "Dosis", sans-serif;
-  color: #F3C623;
+  color: #f3c623;
   font-weight: 600;
 }
 
@@ -51,7 +50,8 @@ p {
   gap: 10px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primar,
+.btn-secondar {
   padding: 0.75rem 1.5rem;
   border: none;
   cursor: pointer;
@@ -59,15 +59,18 @@ p {
   text-align: center;
 }
 
-.btn-primary {
+.btn-primar {
   color: #ffffff;
-  background-color: #10375C;
+  background-color: #10375c;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
 }
 
-.btn-secondary {
-  color: #10375C;
-  background-color: #F3C623;
-  
+.btn-secondar {
+  color: #10375c;
+  background-color: #f3c623;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
 }
 
 .image-section {
@@ -104,7 +107,7 @@ p {
     font-size: 60px;
     margin-bottom: 1rem;
     font-family: "Dosis", sans-serif;
-    color: #F3C623; 
+    color: #f3c623;
     font-weight: 600;
   }
 
@@ -116,7 +119,8 @@ p {
     font-weight: 300;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
   }
 }

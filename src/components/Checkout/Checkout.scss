@@ -12,12 +12,31 @@
   color: #f3c623;
   font-weight: 600;
 
-  h2 {
+  h1 {
     text-align: center;
+    box-sizing: border-box;
     font-family: "Dosis", sans-serif;
     color: #f3c623;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 40px;
+  }
+
+  h5 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+    color: #f3c623;
+    font-weight: 200 !important;
+    font-size: 18px;
+
+  }
+  h2 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+    color: #f3c623;
+    font-weight: 400;
+    font-size: 20px;
   }
 
   form {

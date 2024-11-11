@@ -21,6 +21,14 @@ const ItemCard = ({ producto }) => {
           <div className="text-area row">
             <h4 className="titulo">{producto.producto}</h4>
             <p className="precio">
+              <span className="precio-text">Marca:</span>
+              <span className="monto-text">{producto.marca}</span>
+            </p>
+            <p className="precio">
+              <span className="precio-text">Estado:</span>
+              <span className="monto-text">{producto.estado}</span>
+            </p>
+            <p className="precio">
               <span className="precio-text">Precio:</span>
               <span className="monto-text">$ {producto.precio}</span>
             </p>

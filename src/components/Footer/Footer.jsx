@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { db } from "../../firebase/config";
+import { collection, addDoc } from "firebase/firestore"; // Importa métodos de Firestore
 
 const Footer = () => {
-  const [email, setEmail] = useState('');  // Maneja el estado del email
-  const [message, setMessage] = useState('');  // Estado para el mensaje de confirmación
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -22,22 +24,16 @@ const Footer = () => {
     }
 
     try {
-      const response = await fetch('/api/send-newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+      // Crea una referencia a la colección "newsletters"
+      const newsletterRef = collection(db, "newsletters");
 
-      if (response.ok) {
-        setMessage('Gracias por suscribirte a nuestro newsletter. ¡Te hemos enviado un correo de confirmación!');
-        setEmail('');  // Limpiar el campo del email
-      } else {
-        setMessage('Ocurrió un error al intentar suscribirte. Inténtalo nuevamente más tarde.');
-      }
+      // Agrega un nuevo documento con el email a Firestore
+      await addDoc(newsletterRef, { email });
+
+      setMessage('Gracias por suscribirte a nuestro newsletter. ¡Te hemos enviado un correo de confirmación!');
+      setEmail('');  // Limpiar el campo del email
     } catch (error) {
-      setMessage('Ocurrió un error. Por favor intenta nuevamente.');
+      setMessage('Ocurrió un error al intentar suscribirte. Inténtalo nuevamente más tarde.');
     }
     clearMessageAfterDelay();
   };
@@ -55,34 +51,20 @@ const Footer = () => {
         <div className="footer-box">
           <h2>Sobre Nosotros</h2>
           <p>
-          En Neigborsales, cada compra es el inicio de una nueva historia. Nos dedicamos a conectar a nuestra comunidad con productos de calidad, creando una experiencia cercana y confiable. Queremos que sientas que compras en tu propio vecindario.          </p>
+            En Neigborsales, cada compra es el inicio de una nueva historia. Nos dedicamos a conectar a nuestra comunidad con productos de calidad, creando una experiencia cercana y confiable. Queremos que sientas que compras en tu propio vecindario.
+          </p>
         </div>
 
         <div className="footer-box">
           <h2>Síguenos</h2>
           <div className="social-media">
-            <a
-              href="https://www.instagram.com/neigborsales/?hl=es"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
+            <a href="https://www.instagram.com/neigborsales/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} size="1x" />
             </a>
-            <a
-              href="https://ms-my.facebook.com/dnazariego/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
+            <a href="https://ms-my.facebook.com/dnazariego/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebook} size="1x" />
             </a>
-            <a
-              href="https://wa.me/56964040431"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
+            <a href="https://wa.me/56964040431" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <FontAwesomeIcon icon={faWhatsapp} size="1x" />
             </a>
           </div>
@@ -91,9 +73,7 @@ const Footer = () => {
         <div className="footer-box">
           <h2>Únete a nuestro newsletter</h2>
           <form className="newsletter" onSubmit={handleSubmit}>
-            <label htmlFor="email" className="form-label">
-              Ingresa tu email
-            </label>
+            <label htmlFor="email" className="form-label">Ingresa tu email</label>
             <input
               type="email"
               name="email"
@@ -103,18 +83,14 @@ const Footer = () => {
               className="form-input"
               required
             />
-            <button type="submit" className="btn-news">
-              Unirme
-            </button>
+            <button type="submit" className="btn-news">Unirme</button>
           </form>
           {message && <p className="confirmation-message">{message}</p>}
         </div>
       </div>
 
       <div className="footer-bottom">
-        <small>
-          2024 <b>Neigborsales</b> - Todos los Derechos Reservados.
-        </small>
+        <small>2024 <b>Neigborsales</b> - Todos los Derechos Reservados.</small>
       </div>
     </footer>
   );
