@@ -40,6 +40,7 @@ const NavBar = () => {
                         <NavDropdown.Item as={NavLink} to="/productos/Deportes" onClick={handleLinkClick} activeClassName="active">Deportes</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to="/productos/Educación" onClick={handleLinkClick} activeClassName="active">Educación</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to="/productos/Ropa" onClick={handleLinkClick} activeClassName="active">Ropa</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Plantas" onClick={handleLinkClick} activeClassName="active">Plantas</NavDropdown.Item>
                     </NavDropdown>
                     <Link className="header_link" to="/nosotros" onClick={handleLinkClick}>Nosotros</Link>
                 </nav>
