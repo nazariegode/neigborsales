@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { db } from "../../firebase/config";
 import { collection, addDoc } from "firebase/firestore"; // Importa métodos de Firestore
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -30,7 +31,26 @@ const Footer = () => {
       // Agrega un nuevo documento con el email a Firestore
       await addDoc(newsletterRef, { email });
 
-      setMessage('Gracias por suscribirte a nuestro newsletter. ¡Te hemos enviado un correo de confirmación!');
+      // Enviar correo de bienvenida usando EmailJS
+      const serviceID = 'service_cph229d';
+      const templateID = 'template_gomrqcd';
+      const userID = 'OAiBWamp4N_-lGVvl'; // Tu usuario de EmailJS
+
+      // Parámetros que se van a enviar al template de EmailJS
+      const templateParams = {
+        user_email: email, // El email del usuario registrado
+        message: 'Gracias por suscribirte a nuestro newsletter. ¡Estamos muy felices de tenerte con nosotros!'
+      };
+
+      emailjs.send(serviceID, templateID, templateParams, userID)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setMessage('Gracias por suscribirte a nuestro newsletter. ¡Te hemos enviado un correo de confirmación!');
+        }, (err) => {
+          console.log('FAILED...', err);
+          setMessage('Hubo un error al enviar el correo. Intenta de nuevo más tarde.');
+        });
+
       setEmail('');  // Limpiar el campo del email
     } catch (error) {
       setMessage('Ocurrió un error al intentar suscribirte. Inténtalo nuevamente más tarde.');
