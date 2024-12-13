@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
 import { useParams, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
@@ -15,7 +14,9 @@ const ItemDetail = ({ productos }) => {
 
   const handleAddToCart = () => {
     const productToAdd = { ...filteredProducts[0], cantidad };
-    agregarAlCarrito(productToAdd);
+    if (filteredProducts[0]?.estado !== "Reservado") {
+      agregarAlCarrito(productToAdd);
+    }
   };
 
   return (
@@ -23,12 +24,13 @@ const ItemDetail = ({ productos }) => {
       {filteredProducts.map((producto) => (
         <div className="item-detail-card p-4" key={producto.id}>
           <div className="item-detail-row row g-4">
-            <div className="item-detail-col-img col-md-5">
+            <div className="item-detail-col-img col-md-5 position-relative">
               <Card.Img
                 className="item-detail-img img-fluid rounded"
                 variant="top"
                 src={producto.img}
               />
+              
             </div>
             <div className="item-detail-body col-md-7">
               <div className="item-detail-body">
@@ -53,6 +55,7 @@ const ItemDetail = ({ productos }) => {
                   <button
                     className="item-detail-btn-quantity"
                     onClick={() => setCantidad(Math.max(cantidad - 1, 1))}
+                    disabled={producto.estado === "Reservado"}
                   >
                     -
                   </button>
@@ -62,16 +65,22 @@ const ItemDetail = ({ productos }) => {
                   <button
                     className="item-detail-btn-quantity"
                     onClick={() => setCantidad(cantidad + 1)}
+                    disabled={producto.estado === "Reservado"}
                   >
                     +
                   </button>
                 </div>
 
                 <button
-                  className="item-detail-btn-cart mt-3"
+                  className={`item-detail-btn-cart mt-3 ${
+                    producto.estado === "Reservado" ? "disabled" : ""
+                  }`}
                   onClick={handleAddToCart}
+                  disabled={producto.estado === "Reservado"}
                 >
-                  Agregar al carrito
+                  {producto.estado === "Reservado"
+                    ? "No disponible"
+                    : "Agregar al carrito"}
                 </button>
               </div>
             </div>
