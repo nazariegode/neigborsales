@@ -1,0 +1,97 @@
+.contact-me {
+    padding: 10px;
+    background-color: rgb(19, 86, 148); /* Fondo azul */
+  
+    .contact-subtitle {
+      margin-bottom: 2rem;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #f3c623;
+
+      }
+      p {
+        font-size: 1rem;
+        color: white;
+    }
+    }
+  
+    .contact-image {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      @media (max-width: 768px) {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    .formulario {
+      .form-contact {
+        background: #f3c623;
+        padding: 20px;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+        .form-label {
+          font-size: 15px;
+          font-weight: 500;
+          color: #10375c;
+          font-family: "Dosis", sans-serif;
+
+        }
+
+        .form-control {
+          padding: 5px;
+          border-radius: 0.25rem;
+          font-size: 15px;
+          font-weight: 400;
+          color: #10375c;
+          font-family: "Dosis", sans-serif;
+        }
+  
+        button {
+          font-size: 1rem;
+          background-color: rgb(19, 86, 148); /* Fondo azul */
+          border: none;
+          color: #fff;
+          padding: 0.75rem 1rem;
+          border-radius: 12px;
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+  
+        .alert {
+          font-size: 0.9rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f3c623;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    &:hover {
+        background-color: rgb(19, 86, 148); /* Fondo azul */
+    }
+  
+    i {
+      font-size: 30px;
+      color: rgb(19, 86, 148); /* Fondo azul */
+
+    }
+  }
+  

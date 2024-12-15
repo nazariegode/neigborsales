@@ -41,6 +41,8 @@ const NavBar = () => {
                         <NavDropdown.Item as={NavLink} to="/productos/Educación" onClick={handleLinkClick} activeClassName="active">Educación</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to="/productos/Ropa" onClick={handleLinkClick} activeClassName="active">Ropa</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to="/productos/Plantas" onClick={handleLinkClick} activeClassName="active">Plantas</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Juegos" onClick={handleLinkClick} activeClassName="active">Juegos</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/productos/Herramientas" onClick={handleLinkClick} activeClassName="active">Herramientas</NavDropdown.Item>
                     </NavDropdown>
                     <Link className="header_link" to="/nosotros" onClick={handleLinkClick}>Nosotros</Link>
                 </nav>

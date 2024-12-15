@@ -46,7 +46,7 @@ const ItemDetailContainer = () => {
           backgroundColor: "#ffff"
         }}
       >
-        <img src={spinner} alt="Loading..." style={{ width: '300px', height: '300px' }} />
+        <img src={spinner} alt="Loading..." style={{ width: '200px', height: '200px' }} />
       </div>
     );
   }

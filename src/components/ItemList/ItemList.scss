@@ -64,6 +64,23 @@
     }
   }
   
+
+.nocategory{
+  padding: 50px;
+}
+
+.empty-list-message {
+    text-align: center;
+    font-size: 18px;
+    color: #f3c623;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(19, 86, 148); 
+    border-radius: 10px;
+  }
+
+
   /* Grid layout for cards */
   .container-list {
     display: grid;

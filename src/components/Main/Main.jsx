@@ -1,6 +1,7 @@
 import React from 'react';
 import Cards from '../Carrousel/cardsHome';
 import Home from '../Home/Home';
+import Help from '../Help/Help';
 
 
 const Main = () => {
@@ -11,6 +12,7 @@ const Main = () => {
       <div>
         <Home/>
         <Cards />
+        <Help/>
       </div>
     </>
   );

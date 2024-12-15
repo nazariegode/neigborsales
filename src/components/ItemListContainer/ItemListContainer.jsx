@@ -16,7 +16,7 @@ const ItemListContainer = () => {
             try {
                 const timeout = setTimeout(() => {
                     setLoading(false);
-                }, 10000); 
+                }, 10000);
 
                 const productosCollection = collection(db, 'productos');
                 let querySnapshot;
@@ -35,7 +35,11 @@ const ItemListContainer = () => {
 
                 clearTimeout(timeout);
 
-                setProductosFiltrados(productos);
+                const productosOrdenados = productos.sort((a, b) => 
+                    a.producto.localeCompare(b.producto) 
+                );
+
+                setProductosFiltrados(productosOrdenados);
                 setLoading(false);
             } catch (error) {
                 console.error(error);
@@ -58,7 +62,7 @@ const ItemListContainer = () => {
                         backgroundColor: "#ffff"
                     }}
                 >
-                    <img src={spinner} alt="Loading..." style={{ width: '300px', height: '300px' }} />
+                    <img src={spinner} alt="Loading..." style={{ width: '200px', height: '200px' }} />
                 </div>
             ) : (
                 <ItemList productos={productosFiltrados} category={category} />

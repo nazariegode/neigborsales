@@ -6,7 +6,9 @@ const productos = [
         "precio": 150000,
         "img": "/assets/lavadora.jpg",
         "category": "Electrodomésticos",
-        "stock": 1
+        "stock": 1,
+        "estado": "Disponible",
+        "marca": "LG"
     },
     {
         "id": 2,
