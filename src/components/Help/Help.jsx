@@ -59,7 +59,7 @@ const ContactMe = () => {
         <div className="col-12 mt-4 contact-subtitle">
           <h2 className="text-center">¿Tienes problemas?</h2>
           <p className="text-center">
-            ¡Contáctanos a través de este formulario y te ayudamos!
+            ¡Contáctanos a través de este formulario y te ayudaremos!
           </p>
         </div>
 
