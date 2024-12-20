@@ -109,8 +109,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom row">
         <small>2024 <b>Neigborsales</b> - Todos los Derechos Reservados.</small>
+        <small>Página web diseñada por <b>David Nazariego</b></small>
       </div>
     </footer>
   );
